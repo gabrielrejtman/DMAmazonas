@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fale Conosco - DeMolay Amazonas</title>
+  <link rel="icon" href="images/logo.png" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<!-- CABEÇALHO -->
+<div data-component="header"></div>
+
+<!-- CONTEÚDO -->
+<main class="container mx-auto px-6 py-12">
+  <h1 class="text-4xl font-bold text-blue-900 mb-8">Fale Conosco</h1>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+    <!-- Formulário de Contato -->
+    <article class="bg-white rounded-lg shadow-lg p-8">
+      <h2 class="text-2xl font-bold text-blue-900 mb-6">Envie uma Mensagem</h2>
+      <form class="space-y-4">
+        <div>
+          <label for="name" class="block text-gray-700 font-semibold mb-2">Nome</label>
+          <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900" placeholder="Seu nome completo">
+        </div>
+
+        <div>
+          <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+          <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900" placeholder="seu.email@example.com">
+        </div>
+
+        <div>
+          <label for="phone" class="block text-gray-700 font-semibold mb-2">Telefone (Opcional)</label>
+          <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900" placeholder="(92) 9 9999-9999">
+        </div>
+
+        <div>
+          <label for="subject" class="block text-gray-700 font-semibold mb-2">Assunto</label>
+          <select id="subject" name="subject" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900">
+            <option value="">Selecione um assunto</option>
+            <option value="informacoes">Informações sobre a Ordem</option>
+            <option value="adesao">Quero Ser DeMolay</option>
+            <option value="eventos">Eventos</option>
+            <option value="sugestoes">Sugestões e Comentários</option>
+            <option value="outros">Outros</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="message" class="block text-gray-700 font-semibold mb-2">Mensagem</label>
+          <textarea id="message" name="message" required rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900" placeholder="Sua mensagem aqui..."></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-blue-900 text-white font-bold py-3 rounded-lg hover:bg-red-700 transition">
+          Enviar Mensagem
+        </button>
+      </form>
+    </article>
+
+    <!-- Informações de Contato -->
+    <article class="bg-white rounded-lg shadow-lg p-8">
+      <h2 class="text-2xl font-bold text-blue-900 mb-6">Informações de Contato</h2>
+      
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-lg font-bold text-blue-900 mb-2">📍 Endereço</h3>
+          <p class="text-gray-700">
+            Grande Conselho Estadual da Ordem DeMolay<br>
+            Amazonas<br>
+            Manaus - AM, Brasil
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold text-blue-900 mb-2">📞 Telefone</h3>
+          <p class="text-gray-700">
+            <a href="tel:(92)3000-0000" class="text-blue-900 hover:text-red-700">(92) 3000-0000</a>
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold text-blue-900 mb-2">✉️ Email</h3>
+          <p class="text-gray-700">
+            <a href="mailto:contato@demolayamazonas.com.br" class="text-blue-900 hover:text-red-700">contato@demolayamazonas.com.br</a>
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold text-blue-900 mb-2">🕐 Horário de Funcionamento</h3>
+          <p class="text-gray-700">
+            Segunda a Sexta: 09:00 - 17:00<br>
+            Sábado e Domingo: Fechado
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold text-blue-900 mb-2">🌐 Redes Sociais</h3>
+          <div class="flex gap-4">
+            <a href="https://www.facebook.com" target="_blank" class="text-gray-700 hover:text-blue-900 transition text-2xl">f</a>
+            <a href="https://www.instagram.com" target="_blank" class="text-gray-700 hover:text-blue-900 transition text-2xl">📷</a>
+            <a href="https://www.youtube.com" target="_blank" class="text-gray-700 hover:text-blue-900 transition text-2xl">▶</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!-- Informações Adicionais -->
+  <article class="bg-white rounded-lg shadow-lg p-8 mb-8">
+    <h2 class="text-2xl font-bold text-blue-900 mb-6">Perguntas Frequentes</h2>
+    
+    <div class="space-y-6">
+      <div>
+        <h3 class="text-lg font-bold text-blue-900 mb-2">Como faço para ser membro da Ordem DeMolay?</h3>
+        <p class="text-gray-700">
+          Você pode se candidatar a ser DeMolay visitando um de nossos Capítulos ou entrando em contato conosco. 
+          Visite também <a href="https://ocaminhocomecaaqui.com.br" target="_blank" class="text-blue-900 hover:text-red-700">ocaminhocomecaaqui.com.br</a> para mais informações.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-bold text-blue-900 mb-2">Qual é a idade mínima para ser DeMolay?</h3>
+        <p class="text-gray-700">
+          A idade mínima é 12 anos e a máxima é 21 anos. Existem também programas para crianças mais jovens 
+          através do Programa de Rapazes (Builders).
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-bold text-blue-900 mb-2">Qual é o custo para ser membro?</h3>
+        <p class="text-gray-700">
+          Os custos variam de acordo com o Capítulo. Para informações específicas sobre taxas, 
+          entre em contato conosco diretamente.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-bold text-blue-900 mb-2">Posso participar de eventos sem ser membro?</h3>
+        <p class="text-gray-700">
+          Sim! Muitos de nossos eventos comunitários são abertos ao público. Entre em contato para 
+          saber sobre próximos eventos que você possa participar.
+        </p>
+      </div>
+    </div>
+  </article>
+</main>
+
+<!-- RODAPÉ -->
+<div data-component="footer"></div>
+
+<!-- SCRIPTS -->
+<script src="components.js"></script>
+<script>
+  // Manipular envio do formulário
+  document.querySelector('form')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Obrigado pela sua mensagem! Entraremos em contato em breve.');
+    this.reset();
+  });
+</script>
+</body>
+</html>

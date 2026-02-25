@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeMolay Amazonas</title>
+  <link rel="icon" href="images/logo.png" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+<!-- CABEÇALHO -->
+<div data-component="header"></div>
+
+<!-- CARROSSEL -->
+<section class="mt-6">
+  <div class="swiper mySwiper w-full h-[500px]">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide relative">
+        <img src="images/banner1.jpg" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/40 flex items-center justify-center text-white text-3xl font-bold">Iniciação Estadual ao Grau Demolay 2025</div>
+      </div>
+      <div class="swiper-slide relative">
+        <img src="images/banner2.jpg" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/40 flex items-center justify-center text-white text-3xl font-bold">Como funcionará o Fundo Estadual de Amparo ao Demolay?</div>
+      </div>
+      <div class="swiper-slide relative">
+        <img src="images/banner3.jpg" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/40 flex items-center justify-center text-white text-3xl font-bold">Desafio Nacional de Filantropia</div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<!-- CONTEÚDO -->
+<main class="container mx-auto px-6 py-12">
+  <h2 class="text-3xl font-bold text-blue-900 mb-8 text-center">Últimas Notícias</h2>
+  <div class="grid md:grid-cols-3 gap-8">
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
+      <img src="images/noticia1.jpg" class="w-full h-48 object-cover">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">Ação solidária de fim de ano do capítulo F.D.P</h3>
+        <p class="text-gray-600">Membros da Ordem DeMolay arrecadaram alimentos para comunidades carentes.</p>
+      </div>
+    </div>
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
+      <img src="images/noticia2.jpg" class="w-full h-48 object-cover">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">Nova chapa toma posse do Gabinete Estadual</h3>
+        <p class="text-gray-600">Cerimônia de posse reuniu jovens líderes e autoridades maçônicas.</p>
+      </div>
+    </div>
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
+      <img src="images/noticia3.jpg" class="w-full h-48 object-cover">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">Congresso Estadual da Ordem Demolay</h3>
+        <p class="text-gray-600">Gabinete Estadual promove a instalação de novos capítulos no interior.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- RODAPÉ -->
+<div data-component="footer"></div>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="components.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+</script>
+</body>
+</html>
