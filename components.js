@@ -101,21 +101,17 @@ function renderFooter() {
           <div>
             <h3 class="text-xl font-bold mb-4 text-red-700">Contato</h3>
             <p class="text-gray-300 text-sm mb-2">
-              <strong>Email:</strong> contato@demolayamazonas.com.br
+              <strong>Email:</strong> gceam@demolaybrasil.org.br
             </p>
             <p class="text-gray-300 text-sm mb-4">
-              <strong>Telefone:</strong> (92) 3000-0000
+              <strong>Telefone:</strong> (92) 3622-4188
             </p>
             <div class="flex gap-4">
-              <a href="https://www.facebook.com" target="_blank" class="text-gray-300 hover:text-red-700 transition text-xl">f</a>
-              <a href="https://www.instagram.com" target="_blank" class="text-gray-300 hover:text-red-700 transition text-xl">📷</a>
-              <a href="https://www.youtube.com" target="_blank" class="text-gray-300 hover:text-red-700 transition text-xl">▶</a>
+              <a href="https://www.instagram.com/demolay.amazonas/" target="_blank" class="text-gray-300 hover:text-red-700 transition">
+                <img src="images/instagram.png" alt="Instagram" class="h-6 w-6">
+              </a>
             </div>
           </div>
-        </div>
-
-        <div class="border-t border-blue-800 mt-8 pt-8 text-center text-gray-400 text-sm">
-          <p>&copy; 2026 Grande Conselho Estadual da Ordem DeMolay do Amazonas. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
