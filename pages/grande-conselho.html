@@ -7,132 +7,183 @@
   <link rel="icon" href="../assets/images/logo.png" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../assets/css/styles.css">
+  <style>
+    /* Mobile: padding lateral */
+    @media (max-width: 640px) {
+      main { padding-left: 1rem; padding-right: 1rem; }
+    }
+
+    /* Mobile: evita texto saindo dos cards */
+    .card, .bg-slate-50 { word-break: break-word; overflow-wrap: break-word; }
+
+    /* Mobile: tabela responsiva */
+    @media (max-width: 640px) {
+      .responsive-table thead { display: none; }
+      .responsive-table tr {
+        display: block;
+        border: 1px solid #e2e8f0;
+        margin-bottom: 1rem;
+        border-radius: 0.75rem;
+        background: #fff;
+      }
+      .responsive-table td {
+        display: block;
+        text-align: right;
+        padding: 0.75rem;
+        border-bottom: 1px solid #f1f5f9;
+        position: relative;
+        padding-left: 50%;
+      }
+      .responsive-table td:last-child { border-bottom: 0; }
+      .responsive-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0.75rem;
+        width: 45%;
+        font-weight: bold;
+        text-align: left;
+        color: #1e3a8a;
+      }
+    }
+
+    /* Mobile: feature-list em grid — volta pra coluna única */
+    @media (max-width: 640px) {
+      .feature-list.grid { display: block !important; }
+    }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-<!-- CABEÇALHO -->
 <div data-component="header"></div>
 
-<!-- CONTEÚDO -->
 <main class="container mx-auto px-6 py-12">
-  <section class="section-hero card mb-8">
-    <div class="grid gap-8 lg:grid-cols-[1.4fr_0.9fr] items-center">
-      <div>
-        <span class="eyebrow">Grande Conselho Estadual</span>
-        <h1 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Grande Conselho Estadual</h1>
-        <p class="text-lg text-gray-700 leading-relaxed mb-5">
+  
+  <article class="card p-0 overflow-hidden mb-16">
+    <div class="flex flex-col lg:flex-row lg:items-stretch text-center lg:text-left">
+      <div class="w-full lg:w-1/3 flex justify-center items-center bg-gray-100 lg:p-0">
+        <img src="../assets/images/gce.png" alt="Grande Conselho Estadual" class="w-full h-full object-cover">
+      </div>
+      <div class="p-8 lg:p-12 lg:w-2/3 flex flex-col justify-center items-center lg:items-start">
+        <h1 class="text-3xl md:text-5xl font-bold text-blue-900 mb-6 m-0 w-full">Grande Conselho Estadual</h1>
+        
+        <p class="text-lg text-gray-700 leading-relaxed mb-6 w-full">
           O órgão que une a liderança adulta executiva da Ordem DeMolay no Amazonas, responsável por orientar capítulos, organizar programas de desenvolvimento e fortalecer a atuação estadual.
         </p>
-        <a href="../index.html" class="button-secondary">Voltar à página inicial</a>
-      </div>
-      <img src="../assets/images/gce.png" alt="Grande Conselho Estadual" class="card-image shadow-xl" />
-    </div>
-  </section>
-
-  <article class="card mb-8">
-    <h2 class="section-title">Missão e atuação</h2>
-    <p class="text-lg text-gray-700 leading-relaxed mb-6">
-      O Grande Conselho Estadual supervisiona, orienta e apoia os Capítulos e Organizações Afiliadas no Amazonas. Ele também mantém contato direto com o Supremo Conselho DeMolay Brasil e promove ações de impacto social.
-    </p>
-
-    <div class="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] items-start">
-      <div>
-        <ul class="feature-list">
-          <li>Supervisionar e orientar os Capítulos e Organizações Afiliadas.</li>
-          <li>Promover a criação de novos Capítulos, especialmente em municípios ainda não atendidos.</li>
-          <li>Coordenar programas de desenvolvimento de lideranças.</li>
-          <li>Organizar eventos estaduais com foco em integração e propósito.</li>
-          <li>Manter comunicação ativa com o Supremo Conselho DeMolay Brasil.</li>
-          <li>Promover ações de impacto social e comunitário.</li>
-          <li>Zelar pelo cumprimento dos princípios e regulamentos DeMolay.</li>
+        
+        <h2 class="text-2xl font-bold text-blue-900 mb-4 w-full">Missão e atuação</h2>
+        <p class="text-lg text-gray-700 leading-relaxed w-full">
+          O Grande Conselho Estadual supervisiona, orienta e apoia os Capítulos e Organizações Afiliadas no Amazonas. Ele também mantém contato direto com o Supremo Conselho DeMolay Brasil e promove ações de impacto social.
+        </p>
+        
+        <ul class="feature-list grid grid-cols-1 md:grid-cols-2 gap-x-6 mt-4 w-full text-left">
+          <li>Supervisionar e orientar Organizações Afiliadas.</li>
+          <li>Promover a criação de novos Capítulos.</li>
+          <li>Coordenar programas de lideranças.</li>
+          <li>Organizar eventos estaduais.</li>
+          <li>Comunicação com o Supremo Conselho.</li>
+          <li>Zelar pelos regulamentos DeMolay.</li>
         </ul>
       </div>
-      <img src="../assets/images/ddpd.png" alt="Diretoria do Grande Conselho" class="card-image" />
     </div>
   </article>
 
-  <article class="card mb-8">
-    <h2 class="section-title">Composição atual</h2>
-
-    <div class="mb-8">
-      <h3 class="text-2xl font-semibold text-blue-900 mb-4">Diretoria Executiva</h3>
-      <ul class="feature-list">
-        <li><strong>Grande Mestre Estadual:</strong> Vanylton Bezerra dos Santos.</li>
-        <li><strong>Grande Mestre Estadual Adjunto:</strong> Luís Felipe Farias Maia.</li>
-        <li><strong>Grande Secretário Estadual:</strong> Carlos José Baptista Machado Filho.</li>
-        <li><strong>Grande Secretário Estadual Adjunto:</strong> Bruno dos Reis Mendes.</li>
-        <li><strong>Grande Tesoureiro Estadual:</strong> Jonathan da Silva Santiago.</li>
-        <li><strong>Grande Tesoureiro Estadual Adjunto:</strong> Andre Giovanni de Almeida Coelho.</li>
-        <li><strong>Grande Orador Estadual:</strong> Salomão Ronielli Campos Moreira.</li>
-        <li><strong>Grande Orador Estadual Adjunto:</strong> Bruno dos Reis Mendes.</li>
-      </ul>
-    </div>
-
-    <div class="mb-8">
-      <h3 class="text-2xl font-semibold text-blue-900 mb-4">Oficialarias Executivas</h3>
-      <ul class="feature-list">
-        <li><strong>1ª OFEX &quot;Negro&quot;:</strong> Yuri Simon Salim Jorge Assel.</li>
-        <li><strong>2ª OFEX &quot;Amazonas-Madeira&quot;:</strong> Ivan Antonildo Souza Muller.</li>
-        <li><strong>3ª OFEX &quot;Solimões-Juruá-Purus&quot;:</strong> Manoel Andre Fernandes de Oliveira.</li>
-      </ul>
-    </div>
-
-    <div class="mb-8">
-      <h3 class="text-2xl font-semibold text-blue-900 mb-4">Gabinete do Grande Mestre Estadual</h3>
-      <ul class="feature-list">
-        <li><strong>Assessor:</strong> Solon Bandeira Guedes Neto.</li>
-      </ul>
-    </div>
-
-    <div class="mb-8">
-      <h3 class="text-2xl font-semibold text-blue-900 mb-4">Comissões e seus presidentes</h3>
-      <ul class="feature-list">
-        <li><strong>Comissão de Projetos e Metas:</strong> Guilherme Destro Calixto.</li>
-        <li><strong>Comissão de Ritual e Liturgia:</strong> Victor Rafael Ordozgoite.</li>
-        <li><strong>Comissão de Cavalaria:</strong> Henrick Horta Feitoza.</li>
-        <li><strong>Comissão da Ordem dos Escudeiros:</strong> João Felipe de Paula Almeida.</li>
-        <li><strong>Comissão do Clube de Mães e Amigos:</strong> Lucas Santos da Costa.</li>
-        <li><strong>Comissão de Educação:</strong> Carlos Eder de Souza Pinheiro.</li>
-        <li><strong>Comissão de Legislação:</strong> Alessandro Silva Ribeiro.</li>
-        <li><strong>Comissão de Ética e Disciplina:</strong> Bryan de Abreu Brait.</li>
-        <li><strong>Comissão de Eventos:</strong> Igor Alexandre Gioia de Souto.</li>
-        <li><strong>Comissão de Filantropia:</strong> Marcos Vinicius da Silva Marques.</li>
-        <li><strong>Comissão de Comunicação e Marketing:</strong> Anderfrank da Silva Serrão.</li>
-        <li><strong>Comissão de Orçamento e Finanças:</strong> João Paulo Sena de Oliveira Cavalcante.</li>
-        <li><strong>Comissão de Honrarias e Prêmios:</strong> Fernando Joaquim Vasconcelos de Oliveira.</li>
-        <li><strong>Comissão de Incremento de Novos Membros:</strong> Patrick Marx Vital de Freitas.</li>
-        <li><strong>Comissão Eleitoral:</strong> Gabriel Santos Machado.</li>
-      </ul>
+  <article class="card p-0 overflow-hidden mb-12">
+    <div class="flex flex-col lg:flex-row lg:items-stretch text-center lg:text-left">
+      <div class="w-full lg:w-1/3 flex justify-center items-center bg-slate-100 lg:p-0">
+        <img src="../assets/images/ddpd.png" alt="Diretoria" class="w-full h-full object-cover">
+      </div>
+      <div class="p-8 lg:p-12 lg:w-2/3 flex flex-col justify-center items-center lg:items-start">
+        <h2 class="text-3xl font-bold text-blue-900 mb-6 m-0 w-full">Diretoria Executiva</h2>
+        <ul class="feature-list space-y-3 text-left m-0 w-full">
+          <li><strong>Grande Mestre Estadual:</strong> Vanylton Bezerra dos Santos.</li>
+          <li><strong>Grande Mestre Estadual Adjunto:</strong> Luís Felipe Farias Maia.</li>
+          <li><strong>Grande Secretário Estadual:</strong> Carlos José Baptista Machado Filho.</li>
+          <li><strong>Grande Secretário Estadual Adjunto:</strong> Bruno dos Reis Mendes.</li>
+          <li><strong>Grande Tesoureiro Estadual:</strong> Jonathan da Silva Santiago.</li>
+          <li><strong>Grande Tesoureiro Estadual Adjunto:</strong> Andre Giovanni de Almeida Coelho.</li>
+          <li><strong>Grande Orador Estadual:</strong> Salomão Ronielli Campos Moreira.</li>
+          <li><strong>Grande Orador Estadual Adjunto:</strong> Bruno dos Reis Mendes.</li>
+        </ul>
+      </div>
     </div>
   </article>
 
-  <article class="card mb-8">
-    <h3 class="text-2xl font-semibold text-blue-900 mb-4">Galeria de Grandes Mestres Estaduais</h3>
-    <div class="overflow-hidden rounded-2xl border border-slate-200">
-      <table>
-        <tr><td><b>Mandato</b></td><td><b>Nome</b></td></tr>
-        <tr><td>2002</td><td>Em Construção...</td></tr>
-        <tr><td>2002</td><td>Em Construção...</td></tr>
-        <tr><td>2002</td><td>Em Construção...</td></tr>
-        <tr><td>2002</td><td>Em Construção...</td></tr>
-        <tr><td>2002</td><td>Em Construção...</td></tr>
+  <article class="card mb-12">
+    <h2 class="section-title">Demais integrantes do GCE/AM</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-slate-50 p-6 rounded-2xl">
+        <h3 class="text-xl font-bold text-blue-900 mb-4">Oficialarias Executivas</h3>
+        <ul class="feature-list space-y-2">
+          <li><strong>1ª OFEX "Negro":</strong> Yuri Simon Salim Jorge Assel.</li>
+          <li><strong>2ª OFEX "Amazonas-Madeira":</strong> Ivan Antonildo Souza Muller.</li>
+          <li><strong>3ª OFEX "Solimões-Juruá-Purus":</strong> Manoel Andre Fernandes de Oliveira.</li>
+        </ul>
+        <h3 class="text-xl font-bold text-blue-900 mt-8 mb-4">Gabinete do GME</h3>
+        <ul class="feature-list">
+          <li><strong>Assessor:</strong> Solon Bandeira Guedes Neto.</li>
+        </ul>
+      </div>
+
+      <div class="bg-slate-50 p-6 rounded-2xl">
+        <h3 class="text-xl font-bold text-blue-900 mb-4">Comissões e Presidentes</h3>
+        <ul class="feature-list text-sm space-y-1">
+          <li><strong>Projetos e Metas:</strong> Guilherme Destro Calixto.</li>
+          <li><strong>Ritual e Liturgia:</strong> Victor Rafael Ordozgoite.</li>
+          <li><strong>Cavalaria:</strong> Henrick Horta Feitoza.</li>
+          <li><strong>Ordem dos Escudeiros:</strong> João Felipe de Paula Almeida.</li>
+          <li><strong>Clube de Mães e Amigos:</strong> Lucas Santos da Costa.</li>
+          <li><strong>Educação:</strong> Carlos Eder de Souza Pinheiro.</li>
+          <li><strong>Legislação:</strong> Alessandro Silva Ribeiro.</li>
+          <li><strong>Ética e Disciplina:</strong> Bryan de Abreu Brait.</li>
+          <li><strong>Eventos:</strong> Igor Alexandre Gioia de Souto.</li>
+          <li><strong>Filantropia:</strong> Marcos Vinicius da Silva Marques.</li>
+          <li><strong>Comunicação e Marketing:</strong> Anderfrank da Silva Serrão.</li>
+          <li><strong>Orçamento e Finanças:</strong> João Paulo Sena de Oliveira Cavalcante.</li>
+          <li><strong>Honrarias e Prêmios:</strong> Fernando Joaquim Vasconcelos de Oliveira.</li>
+          <li><strong>Novos Membros:</strong> Patrick Marx Vital de Freitas.</li>
+          <li><strong>Eleitoral:</strong> Gabriel Santos Machado.</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+  <article class="card mb-12">
+    <h3 class="text-2xl font-bold text-blue-900 mb-6">Galeria de Grandes Mestres Estaduais</h3>
+    <div class="overflow-hidden rounded-2xl border border-gray-100 shadow-sm">
+      <table class="w-full text-left border-collapse responsive-table">
+        <thead>
+          <tr>
+            <th class="bg-slate-50 text-blue-900 font-bold p-4">Mandato</th>
+            <th class="bg-slate-50 text-blue-900 font-bold p-4">Nome</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100">
+          <tr>
+            <td data-label="Mandato" class="p-4">2026-2028</td>
+            <td data-label="Nome" class="p-4">Vanylton Bezerra dos Santos</td>
+          </tr>
+          <tr>
+            <td data-label="Mandato" class="p-4">2024-2026</td>
+            <td data-label="Nome" class="p-4">Solon Bandeira Guedes Neto</td>
+          </tr>
+          <tr>
+            <td data-label="Mandato" class="p-4">2022-2024</td>
+            <td data-label="Nome" class="p-4 italic text-gray-500">Em Construção...</td>
+          </tr>
+        </tbody>
       </table>
     </div>
   </article>
+
+  <div class="text-center">
+    <a href="#" class="button-secondary">
+      Voltar ao Topo
+    </a>
+  </div>
 </main>
 
-
-<!-- RODAPÉ -->
 <div data-component="footer"></div>
 
-<!-- SCRIPTS -->
 <script src="../assets/js/components.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-

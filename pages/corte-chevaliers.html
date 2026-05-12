@@ -9,63 +9,108 @@
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body class="bg-gray-50 text-gray-800">
+
 <div data-component="header"></div>
+
 <main class="container mx-auto px-6 py-12">
-  <article class="card bg-white rounded-[2rem] border border-slate-200 shadow-xl overflow-hidden">
-    <div class="lg:flex lg:items-center">
-      <img src="../assets/images/corte.png" alt="Corte de Chevaliers" class="w-full lg:w-1/3 h-72 object-cover image-card">
-      <div class="p-8 lg:p-10">
-        <h1 class="text-3xl font-bold text-blue-900 mb-4">Corte de Chevaliers</h1>
-        <p class="text-lg leading-relaxed text-gray-700 mb-4">
+  
+  <article class="card p-0 overflow-hidden mb-16">
+    <div class="flex flex-col lg:flex-row lg:items-stretch text-center lg:text-left">
+      <div class="w-full lg:w-1/3 flex justify-center items-center bg-gray-100 lg:p-0">
+        <img src="../assets/images/corte.png" alt="Corte de Chevaliers" class="w-full h-full object-cover">
+      </div>
+      <div class="p-8 lg:p-12 lg:w-2/3 flex flex-col justify-center items-center lg:items-start">
+        <h1 class="text-3xl font-bold text-blue-900 mb-6 m-0 w-full">Corte de Chevaliers</h1>
+        
+        <p class="text-lg leading-relaxed text-gray-700 mb-6 w-full">
           A Corte de Chevaliers reúne os membros que receberam o Grau de Chevalier, a honraria mais alta para um DeMolay ativo. Essa ordem valoriza os jovens que demonstram mérito, serviço e compromisso com a Ordem DeMolay.
         </p>
-        <p class="text-lg leading-relaxed text-gray-700 mb-4">
+        <p class="text-lg leading-relaxed text-gray-700 mb-8 w-full">
           O capítulo Comendadores da Luz nº 72 é patrocinado pelas lojas Fireza e Renascença nº 37 e Encontro das Águas nº 33. O Comendador do Leste atual é Victor Rafael Ordozgoite (Jan-Dez/2026).
         </p>
-        <div class="grid gap-4 sm:grid-cols-2">
-          <div class="rounded-3xl bg-slate-50 p-5">
-            <h2 class="font-semibold text-blue-900 mb-2">Localização</h2>
-            <p>Amazonas, com forte atuação no estado de Manaus e região.</p>
-          </div>
-          <div class="rounded-3xl bg-slate-50 p-5">
-            <h2 class="font-semibold text-blue-900 mb-2">Contato</h2>
-            <p>Instagram oficial: <a href="https://www.instagram.com/comendadoresdaluz" target="_blank" class="text-red-600 hover:underline">@comendadoresdaluz</a></p>
-          </div>
+        
+        <div class="flex flex-col sm:flex-row items-center gap-4 w-full justify-center lg:justify-start">
+          <span class="font-bold text-blue-900 uppercase tracking-wider text-sm">Siga-nos:</span>
+          <a href="https://www.instagram.com/comendadoresdaluz" target="_blank" class="button-secondary py-2 px-6 flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c.796 0 1.441.645 1.441 1.44s-.645 1.44-1.441 1.44c-.795 0-1.439-.645-1.439-1.44s.644-1.44 1.439-1.44z"/></svg>
+            @comendadoresdaluz
+          </a>
         </div>
-      </div>
-    </div>
-    <div class="p-8 lg:p-10 border-t border-slate-200">
-      <h2 class="text-2xl font-bold text-blue-900 mb-4">Chevaliers do Amazonas</h2>
-      <p class="text-gray-700 leading-relaxed mb-4">
-        A Corte de Chevaliers agrupa membros experientes de diferentes capítulos, reconhecendo sua dedicação através de investiduras especiais.
-      </p>
-      <div class="grid gap-4 md:grid-cols-2">
-        <div class="rounded-3xl bg-slate-50 p-6">
-          <h3 class="font-semibold text-blue-900 mb-3">Cidade de Manaus nº 26</h3>
-          <p class="text-gray-700">12 Chevaliers ativos</p>
-        </div>
-        <div class="rounded-3xl bg-slate-50 p-6">
-          <h3 class="font-semibold text-blue-900 mb-3">Unidos na Esperança nº 29</h3>
-          <p class="text-gray-700">2 Chevaliers</p>
-        </div>
-        <div class="rounded-3xl bg-slate-50 p-6">
-          <h3 class="font-semibold text-blue-900 mb-3">Filhos do Verde Amazônico nº 43</h3>
-          <p class="text-gray-700">9 Chevaliers</p>
-        </div>
-        <div class="rounded-3xl bg-slate-50 p-6">
-          <h3 class="font-semibold text-blue-900 mb-3">Ajuricaba/Amazonas nº 263</h3>
-          <p class="text-gray-700">19 Chevaliers</p>
-        </div>
-                <div class="rounded-3xl bg-slate-50 p-6">
-          <h3 class="font-semibold text-blue-900 mb-3">Cavaleiros da Verdadeira Luz nº 1200</h3>
-          <p class="text-gray-700">1 Chevalier</p>
-        </div>
-      </div>
-      <div class="mt-8">
       </div>
     </div>
   </article>
+
+  <section>
+    <div class="flex items-center justify-center md:justify-start gap-4 mb-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-blue-900 m-0">Chevaliers do Amazonas</h2>
+    </div>
+    <p class="text-lg text-gray-700 leading-relaxed mb-8 text-center md:text-left">
+      A Corte de Chevaliers agrupa membros experientes de diferentes capítulos, reconhecendo sua dedicação através de investiduras especiais.
+    </p>
+
+    <div class="content-grid-3 text-center md:text-left">
+      
+      <article class="card flex flex-col justify-between border-t-4 border-t-red-700">
+        <h3 class="text-xl font-bold text-blue-900 mb-4 m-0">Cidade de Manaus nº 26</h3>
+        <div class="flex items-baseline justify-center md:justify-start gap-2">
+          <span class="text-4xl font-bold text-red-700">12</span>
+          <span class="text-gray-500 font-medium">Chevaliers</span>
+        </div>
+      </article>
+
+      <article class="card flex flex-col justify-between border-t-4 border-t-red-700">
+        <h3 class="text-xl font-bold text-blue-900 mb-4 m-0">Unidos na Esperança nº 29</h3>
+        <div class="flex items-baseline justify-center md:justify-start gap-2">
+          <span class="text-4xl font-bold text-red-700">02</span>
+          <span class="text-gray-500 font-medium">Chevaliers</span>
+        </div>
+      </article>
+
+      <article class="card flex flex-col justify-between border-t-4 border-t-red-700">
+        <h3 class="text-xl font-bold text-blue-900 mb-4 m-0">Filhos do Verde Amazônico nº 43</h3>
+        <div class="flex items-baseline justify-center md:justify-start gap-2">
+          <span class="text-4xl font-bold text-red-700">09</span>
+          <span class="text-gray-500 font-medium">Chevaliers</span>
+        </div>
+      </article>
+
+      <article class="card flex flex-col justify-between border-t-4 border-t-red-700">
+        <h3 class="text-xl font-bold text-blue-900 mb-4 m-0">Ajuricaba/Amazonas nº 263</h3>
+        <div class="flex items-baseline justify-center md:justify-start gap-2">
+          <span class="text-4xl font-bold text-red-700">19</span>
+          <span class="text-gray-500 font-medium">Chevaliers</span>
+        </div>
+      </article>
+
+      <article class="card flex flex-col justify-between border-t-4 border-t-red-700">
+        <h3 class="text-xl font-bold text-blue-900 mb-4 m-0">Cavaleiros da Verdadeira Luz nº 1200</h3>
+        <div class="flex items-baseline justify-center md:justify-start gap-2">
+          <span class="text-4xl font-bold text-red-700">02</span>
+          <span class="text-gray-500 font-medium">Chevaliers</span>
+        </div>
+      </article>
+
+      <article class="card flex flex-col justify-between border-t-4 border-t-red-700">
+        <h3 class="text-xl font-bold text-blue-900 mb-4 m-0">Filhos das Águas nº 926</h3>
+        <div class="flex items-baseline justify-center md:justify-start gap-2">
+          <span class="text-4xl font-bold text-red-700">07</span>
+          <span class="text-gray-500 font-medium">Chevaliers</span>
+        </div>
+      </article>
+
+      <article class="card flex flex-col justify-between border-t-4 border-t-red-700">
+        <h3 class="text-xl font-bold text-blue-900 mb-4 m-0">Forte de Ega nº 1186</h3>
+        <div class="flex items-baseline justify-center md:justify-start gap-2">
+          <span class="text-4xl font-bold text-red-700">03</span>
+          <span class="text-gray-500 font-medium">Chevaliers</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
 </main>
+
 <div data-component="footer"></div>
 <script src="../assets/js/components.js"></script>
 </body>

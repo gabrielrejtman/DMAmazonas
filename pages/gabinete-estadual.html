@@ -7,35 +7,79 @@
   <link rel="icon" href="../assets/images/logo.png" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../assets/css/styles.css">
+  <style>
+    /* Mobile: padding lateral */
+    @media (max-width: 640px) {
+      main { padding-left: 1rem; padding-right: 1rem; }
+    }
+
+    /* Mobile: evita texto saindo dos cards */
+    .card, .bg-slate-50 { word-break: break-word; overflow-wrap: break-word; }
+
+    /* Mobile: tabela responsiva */
+    @media (max-width: 640px) {
+      .responsive-table thead { display: none; }
+      .responsive-table tr {
+        display: block;
+        border: 1px solid #e2e8f0;
+        margin-bottom: 1rem;
+        border-radius: 0.75rem;
+        background: #fff;
+      }
+      .responsive-table td {
+        display: block;
+        text-align: right;
+        padding: 0.75rem;
+        border-bottom: 1px solid #f1f5f9;
+        position: relative;
+        padding-left: 50%;
+      }
+      .responsive-table td:last-child { border-bottom: 0; }
+      .responsive-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0.75rem;
+        width: 45%;
+        font-weight: bold;
+        text-align: left;
+        color: #1e3a8a;
+      }
+    }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-<!-- CABEÇALHO -->
 <div data-component="header"></div>
 
-<!-- CONTEÚDO -->
 <main class="container mx-auto px-6 py-12">
-  <section class="section-hero card mb-8">
-    <div class="grid gap-8 lg:grid-cols-[1.4fr_0.9fr] items-center">
-      <div>
-        <span class="eyebrow">Gabinete Estadual</span>
-        <h1 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Gabinete Estadual</h1>
-        <p class="text-lg text-gray-700 leading-relaxed mb-5">
+  
+  <article class="card p-0 overflow-hidden mb-16">
+    <div class="flex flex-col lg:flex-row lg:items-stretch">
+      <div class="w-full lg:w-1/3 bg-blue-900 flex justify-center items-center">
+        <img src="../assets/images/ge.png" alt="Gabinete Estadual" class="w-full h-full object-cover">
+      </div>
+      <div class="p-8 lg:p-12 lg:w-2/3 flex flex-col justify-center">
+        <h1 class="text-3xl font-bold text-blue-900 mb-6 m-0">Gabinete Estadual</h1>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
           O Gabinete Estadual reúne a coordenação jovem executiva da Ordem DeMolay no Amazonas. Ele articula programas, acompanha a atuação dos capítulos e promove a integração entre as lideranças estaduais.
         </p>
         <p class="text-lg text-gray-700 leading-relaxed">
           Atua como apoio ao Grande Conselho Estadual e fortalece a implementação de ações de liderança, comunicação e desenvolvimento entre os jovens do estado.
         </p>
       </div>
-      <img src="../assets/images/ge.png" alt="Gabinete Estadual" class="card-image shadow-xl" />
     </div>
-  </section>
+  </article>
 
-  <article class="card mb-8">
-    <h2 class="section-title">Composição atual</h2>
-    <div class="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] items-start">
-      <div>
-        <ul class="feature-list">
+<article class="card mb-12">
+    <h2 class="section-title text-center md:text-left">Composição atual</h2>
+    <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] items-center lg:items-start">
+      
+      <div class="flex justify-center w-full">
+        <img src="../assets/images/fp.png" alt="Equipe do Gabinete Estadual" class="w-full max-w-[250px] lg:max-w-[300px] h-auto object-contain rounded-xl drop-shadow-sm">
+      </div>
+      
+      <div class="bg-slate-50 p-6 md:p-8 rounded-2xl w-full">
+        <ul class="feature-list text-left m-0">
           <li><strong>Mestre Conselheiro Estadual:</strong> Luiz Eduardo Souza Araújo.</li>
           <li><strong>Mestre Conselheiro Estadual Adjunto:</strong> Rafael Oliveira Nunes.</li>
           <li><strong>Secretário Geral:</strong> Pedro David Silva Ferreira.</li>
@@ -45,36 +89,47 @@
           <li><strong>Mestre Conselheiro Regional (3ª Região):</strong> Isaac de Oliveira Rodrigues.</li>
         </ul>
       </div>
-      <img src="../assets/images/fp.png" alt="Equipe do Gabinete Estadual" class="card-image max-w-md mx-auto lg:mx-0" />
+
     </div>
   </article>
 
-  <article class="card mb-8">
-    <h2 class="text-2xl font-bold text-blue-900 mb-4 mt-0">Galeria de Mestres Conselheiros Estaduais</h2>
-    <div class="overflow-hidden rounded-2xl border border-slate-200">
-      <table>
-        <tr><td><b>Mandato</b></td><td><b>Nomes</b></td></tr>
-        <tr><td>2002</td><td>Em Construção...</td></tr>
-        <tr><td>2002</td><td>Em Construção...</td></tr>
-        <tr><td>2002</td><td>Em Construção...</td></tr>
-        <tr><td>2002</td><td>Em Construção...</td></tr>
-        <tr><td>2002</td><td>Em Construção...</td></tr>
+  <article class="card mb-12">
+    <h3 class="text-2xl font-bold text-blue-900 mb-6 m-0">Galeria de Mestres Conselheiros Estaduais</h3>
+    <div class="overflow-hidden rounded-2xl border border-gray-100 shadow-sm mt-6">
+      <table class="w-full text-left border-collapse responsive-table">
+        <thead>
+          <tr>
+            <th class="bg-slate-50 text-blue-900 font-bold p-4">Mandato</th>
+            <th class="bg-slate-50 text-blue-900 font-bold p-4">Nome</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100">
+          <tr>
+            <td data-label="Mandato" class="p-4">2026-2027</td>
+            <td data-label="Nome" class="p-4">Luiz Eduardo Araújo</td>
+          </tr>
+          <tr>
+            <td data-label="Mandato" class="p-4">2024-2025</td>
+            <td data-label="Nome" class="p-4">Paulo Henrique Guedes</td>
+          </tr>
+          <tr>
+            <td data-label="Mandato" class="p-4">2023-2024</td>
+            <td data-label="Nome" class="p-4">Igor Gioia Souto</td>
+          </tr>
+        </tbody>
       </table>
     </div>
   </article>
+
+  <div class="text-center">
+    <a href="#" class="button-secondary">
+      Voltar ao Topo
+    </a>
+  </div>
 </main>
 
-<!-- RODAPÉ -->
 <div data-component="footer"></div>
 
-<!-- SCRIPTS -->
 <script src="../assets/js/components.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-

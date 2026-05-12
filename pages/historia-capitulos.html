@@ -7,137 +7,214 @@
   <link rel="icon" href="../assets/images/logo.png" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../assets/css/styles.css">
+  <style>
+    /* Mobile: padding lateral */
+    @media (max-width: 640px) {
+      main { padding-left: 1rem; padding-right: 1rem; }
+    }
+
+    /* Mobile: evita texto saindo dos cards */
+    .card { word-break: break-word; overflow-wrap: break-word; }
+
+    /* Mobile: grid de capítulos — 1 coluna */
+    @media (max-width: 640px) {
+      .content-grid-3 { grid-template-columns: 1fr !important; }
+    }
+
+    /* Mobile: imagem do card ocupa largura total sem altura fixa excessiva */
+    @media (max-width: 640px) {
+      .content-grid-3 .image-card { height: 180px; width: 100%; object-fit: cover; }
+    }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
 <div data-component="header"></div>
 
 <main class="container mx-auto px-6 py-12">
-  <section class="section-hero card mb-8">
-    <div class="grid gap-8 lg:grid-cols-[1.4fr_0.9fr] items-center">
-      <div>
-        <span class="eyebrow">Capítulos DeMolay</span>
-        <h1 class="text-3xl sm:text-4xl font-bold text-blue-900 mb-4">Capítulos DeMolay do Amazonas</h1>
-        <p class="text-lg text-gray-700 leading-relaxed mb-5">
+  
+  <article class="card p-0 overflow-hidden mb-16">
+    <div class="flex flex-col lg:flex-row lg:items-stretch text-center lg:text-left">
+      <div class="w-full lg:w-1/3 flex justify-center items-center bg-gray-100 lg:p-0">
+        <img src="../assets/images/brasaodemolay.jpg" alt="Brasão DeMolay" class="w-full h-full object-cover">
+      </div>
+      <div class="p-8 lg:p-12 lg:w-2/3 flex flex-col justify-center items-center lg:items-start">
+        <h1 class="text-3xl md:text-5xl font-bold text-blue-900 mb-6 m-0 w-full">Capítulos DeMolay do Amazonas</h1>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6 w-full">
           Os Capítulos DeMolays são as células da Ordem onde os jovens realizam atividades administrativas, filantrópicas e de desenvolvimento pessoal. Cada capítulo representa um espaço de liderança, amizade e compromisso com a comunidade.
         </p>
-        <p class="text-lg text-gray-700 leading-relaxed">
+        <p class="text-lg text-gray-700 leading-relaxed m-0 w-full">
           Aqui estão alguns dos capítulos ativos no estado, com seus dados de contato, guia de reuniões e uma história própria. Escolha um capítulo para saber mais e descobrir como participar dessa trajetória.
         </p>
       </div>
-      <img src="../assets/images/brasaodemolay.jpg" alt="Brasaô de DeMolay" class="card-image shadow-xl" />
     </div>
-  </section>
-
-  <section class="mb-8">
-    <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-      <div>
-        <p class="text-sm uppercase tracking-[0.3em] text-red-700 font-semibold">Seus próximos passos</p>
-        <h2 class="text-3xl font-bold text-blue-900">Conheça nossos Capítulos</h2>
-      </div>
-    </div>
-  </section>
+  </article>
 
   <section class="content-grid-3">
-    <article class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm">
-      <img src="../assets/images/capitulocdm.png" alt="Capítulo Cidade de Manaus" class="image-card w-full h-44 object-cover mb-4">
-      <h3 class="text-xl font-semibold text-blue-900 mb-3">Capítulo Cidade de Manaus nº 26</h3>
-      <p class="text-gray-700 mb-2"><strong>Loja Patrocinadora:</strong> Rio Negro nº 4 (GLOMAM)</p>
-      <p class="text-gray-700 mb-2"><strong>Reuniões:</strong> Sábados às 15h</p>
-      <p class="text-gray-700 mb-4"><strong>Mestre Conselheiro:</strong> André Roberto Meireles Amaral (Jan-Jun/2026)</p>
-      <a href="h26.html" class="back-button">História do capítulo</a>
+    
+    <article class="card flex flex-col justify-between">
+      <div>
+        <img src="../assets/images/capitulocdm.png" alt="Cidade de Manaus" class="image-card w-full h-48 object-cover mb-6">
+        <h3 class="text-xl font-bold text-blue-900 mb-4">Cidade de Manaus nº 26</h3>
+        <div class="space-y-2 mb-6">
+          <p class="small-text"><strong>Loja:</strong> Rio Negro nº 4 (GLOMAM)</p>
+          <p class="small-text"><strong>Reuniões:</strong> Sábados às 15h</p>
+          <p class="small-text text-blue-900"><strong>MC:</strong> André Roberto Meireles Amaral</p>
+        </div>
+      </div>
+      <a href="h26.html" class="button w-full text-center">História do capítulo</a>
     </article>
 
-    <article class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm">
-      <img src="../assets/images/capituloune.png" alt="Capítulo Unidos na Esperança" class="image-card w-full h-44 object-cover mb-4">
-      <h3 class="text-xl font-semibold text-blue-900 mb-3">Capítulo Unidos na Esperança nº 29</h3>
-      <p class="text-gray-700 mb-2"><strong>Loja Patrocinadora:</strong> Esperança e Porvir nº 1 (GLOMAM)</p>
-      <p class="text-gray-700 mb-2"><strong>Reuniões:</strong> Sábados às 15h</p>
-      <p class="text-gray-700 mb-4"><strong>Mestre Conselheiro:</strong> Carlos Eduardo Libório Monteiro (Jan-Jun/2026)</p>
-      <a href="h29.html" class="back-button">História do capítulo</a>
+    <article class="card flex flex-col justify-between">
+      <div>
+        <img src="../assets/images/capituloune.png" alt="Unidos na Esperança" class="image-card w-full h-48 object-cover mb-6">
+        <h3 class="text-xl font-bold text-blue-900 mb-4">Unidos na Esperança nº 29</h3>
+        <div class="space-y-2 mb-6">
+          <p class="small-text"><strong>Loja:</strong> Esperança e Porvir nº 1 (GLOMAM)</p>
+          <p class="small-text"><strong>Reuniões:</strong> Sábados às 15h</p>
+          <p class="small-text text-blue-900"><strong>MC:</strong> Carlos Eduardo Libório Monteiro</p>
+        </div>
+      </div>
+      <a href="h29.html" class="button w-full text-center">História do capítulo</a>
     </article>
 
-    <article class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm">
-      <img src="../assets/images/capitulofva.png" alt="Capítulo Filhos do Verde Amazônico" class="image-card w-full h-44 object-cover mb-4">
-      <h3 class="text-xl font-semibold text-blue-900 mb-3">Capítulo Filhos do Verde Amazônico nº 43</h3>
-      <p class="text-gray-700 mb-2"><strong>Loja Patrocinadora:</strong> Firmeza e Renascença nº 37 (GLOMAM)</p>
-      <p class="text-gray-700 mb-2"><strong>Reuniões:</strong> Sábados às 15h</p>
-      <p class="text-gray-700 mb-4"><strong>Mestre Conselheiro:</strong> Alysson Fernando Castro da Cruz (Jan-Jun/2026)</p>
-      <a href="h43.html" class="back-button">História do capítulo</a>
+    <article class="card flex flex-col justify-between">
+      <div>
+        <img src="../assets/images/capitulofva.png" alt="Filhos do Verde Amazônico" class="image-card w-full h-48 object-cover mb-6">
+        <h3 class="text-xl font-bold text-blue-900 mb-4">Filhos do Verde Amazônico nº 43</h3>
+        <div class="space-y-2 mb-6">
+          <p class="small-text"><strong>Loja:</strong> Firmeza e Renascença nº 37 (GLOMAM)</p>
+          <p class="small-text"><strong>Reuniões:</strong> Sábados às 15h</p>
+          <p class="small-text text-blue-900"><strong>MC:</strong> Alysson Fernando Castro da Cruz</p>
+        </div>
+      </div>
+      <a href="h43.html" class="button w-full text-center">História do capítulo</a>
     </article>
 
-    <article class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm">
-      <img src="../assets/images/capituloaju.png" alt="Capítulo Ajuricaba" class="image-card w-full h-44 object-cover mb-4">
-      <h3 class="text-xl font-semibold text-blue-900 mb-3">Capítulo Ajuricaba/Amazonas nº 263</h3>
-      <p class="text-gray-700 mb-2"><strong>Loja Patrocinadora:</strong> Amazonas nº 2 (GLOMAM)</p>
-      <p class="text-gray-700 mb-2"><strong>Reuniões:</strong> Sábados às 15h</p>
-      <p class="text-gray-700 mb-4"><strong>Mestre Conselheiro:</strong> Hugo de Araujo Cardoso Santana (Jan-Jun/2026)</p>
-      <a href="h263.html" class="back-button">História do capítulo</a>
+    <article class="card flex flex-col justify-between">
+      <div>
+        <img src="../assets/images/capituloaju.png" alt="Ajuricaba" class="image-card w-full h-48 object-cover mb-6">
+        <h3 class="text-xl font-bold text-blue-900 mb-4">Ajuricaba/Amazonas nº 263</h3>
+        <div class="space-y-2 mb-6">
+          <p class="small-text"><strong>Loja:</strong> Amazonas nº 2 (GLOMAM)</p>
+          <p class="small-text"><strong>Reuniões:</strong> Sábados às 15h</p>
+          <p class="small-text text-blue-900"><strong>MC:</strong> Hugo de Araujo Cardoso Santana</p>
+        </div>
+      </div>
+      <a href="h263.html" class="button w-full text-center">História do capítulo</a>
     </article>
 
-    <article class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm">
-      <img src="../assets/images/capitulofda.png" alt="Capítulo Filhos das Águas" class="image-card w-full h-44 object-cover mb-4">
-      <h3 class="text-xl font-semibold text-blue-900 mb-3">Capítulo Filhos das Águas nº 926</h3>
-      <p class="text-gray-700 mb-2"><strong>Loja Patrocinadora:</strong> Encontro das Águas nº 33, Dez de Julho nº 41 e Liberdade e Progresso nº 43</p>
-      <p class="text-gray-700 mb-2"><strong>Reuniões:</strong> Sábados às 10h</p>
-      <p class="text-gray-700 mb-4"><strong>Mestre Conselheiro:</strong> Douglas Yago de Oliveira Casas (Jan-Jun/2026)</p>
-      <a href="h926.html" class="back-button">História do capítulo</a>
+    <article class="card flex flex-col justify-between">
+      <div>
+        <img src="../assets/images/capitulofda.png" alt="Filhos das Águas" class="image-card w-full h-48 object-cover mb-6">
+        <h3 class="text-xl font-bold text-blue-900 mb-4">Filhos das Águas nº 926</h3>
+        <div class="space-y-2 mb-6">
+          <p class="small-text"><strong>Loja:</strong> Encontro das Águas nº 33 (e outras)</p>
+          <p class="small-text"><strong>Reuniões:</strong> Sábados às 10h</p>
+          <p class="small-text text-blue-900"><strong>MC:</strong> Douglas Yago de Oliveira Casas</p>
+        </div>
+      </div>
+      <a href="h926.html" class="button w-full text-center">História do capítulo</a>
     </article>
 
-    <article class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm">
-      <img src="../assets/images/capitulosars.png" alt="Capítulo Sentinela do Alto Rio Solimões" class="image-card w-full h-44 object-cover mb-4">
-      <h3 class="text-xl font-semibold text-blue-900 mb-3">Capítulo Sentinela do Alto Rio Solimões nº 1034</h3>
-      <p class="text-gray-700 mb-2"><strong>Loja Patrocinadora:</strong> Tiradentes nº 34 (GLOMAM)</p>
-      <p class="text-gray-700 mb-2"><strong>Reuniões:</strong> Segundas às 20h</p>
-      <p class="text-gray-700 mb-4"><strong>Mestre Conselheiro:</strong> Diego Gabriel da Silva Rabelo (Jan-Jun/2026)</p>
-      <a href="h1034.html" class="back-button">História do capítulo</a>
+    <article class="card flex flex-col justify-between">
+      <div>
+        <img src="../assets/images/capitulosars.png" alt="Sentinela" class="image-card w-full h-48 object-cover mb-6">
+        <h3 class="text-xl font-bold text-blue-900 mb-4">Sentinela do Alto Solimões nº 1034</h3>
+        <div class="space-y-2 mb-6">
+          <p class="small-text"><strong>Loja:</strong> Tiradentes nº 34 (GLOMAM)</p>
+          <p class="small-text"><strong>Reuniões:</strong> Segundas às 20h</p>
+          <p class="small-text text-blue-900"><strong>MC:</strong> Diego Gabriel da Silva Rabelo</p>
+        </div>
+      </div>
+      <a href="h1034.html" class="button w-full text-center">História do capítulo</a>
     </article>
 
-    <article class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm">
-      <img src="../assets/images/capitulofde.png" alt="Capítulo Forte de Ega" class="image-card w-full h-44 object-cover mb-4">
-      <h3 class="text-xl font-semibold text-blue-900 mb-3">Capítulo Forte de Ega nº 1186</h3>
-      <p class="text-gray-700 mb-2"><strong>Loja Patrocinadora:</strong> São Peixoto nº 13 (GLOMAM)</p>
-      <p class="text-gray-700 mb-2"><strong>Reuniões:</strong> Sábados às 15h</p>
-      <p class="text-gray-700 mb-4"><strong>Mestre Conselheiro:</strong> Marcos Paulo Alves de Moraes (Jan-Jun/2026)</p>
-      <a href="h1186.html" class="back-button">História do capítulo</a>
+    <article class="card flex flex-col justify-between">
+      <div>
+        <img src="../assets/images/capitulofde.png" alt="Forte de Ega" class="image-card w-full h-48 object-cover mb-6">
+        <h3 class="text-xl font-bold text-blue-900 mb-4">Forte de Ega nº 1186</h3>
+        <div class="space-y-2 mb-6">
+          <p class="small-text"><strong>Loja:</strong> São Peixoto nº 13 (GLOMAM)</p>
+          <p class="small-text"><strong>Reuniões:</strong> Sábados às 15h</p>
+          <p class="small-text text-blue-900"><strong>MC:</strong> Marcos Paulo Alves de Moraes</p>
+        </div>
+      </div>
+      <a href="h1186.html" class="button w-full text-center">História do capítulo</a>
     </article>
 
-    <article class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm">
-      <img src="../assets/images/capitulocvl.png" alt="Capítulo Verdadeira Luz" class="image-card w-full h-44 object-cover mb-4">
-      <h3 class="text-xl font-semibold text-blue-900 mb-3">Capítulo Cavaleiros da Verdadeira Luz nº 1200</h3>
-      <p class="text-gray-700 mb-2"><strong>Loja Patrocinadora:</strong> Verdadeira Luz nº 2531 (GOBAM)</p>
-      <p class="text-gray-700 mb-2"><strong>Reuniões:</strong> Sábados às 15h</p>
-      <p class="text-gray-700 mb-4"><strong>Mestre Conselheiro:</strong> Gabriel Dias Rejtman (Jan-Jun/2026)</p>
-      <a href="h1200.html" class="back-button">História do capítulo</a>
+    <article class="card flex flex-col justify-between">
+      <div>
+        <img src="../assets/images/capitulocvl.png" alt="Verdadeira Luz" class="image-card w-full h-48 object-cover mb-6">
+        <h3 class="text-xl font-bold text-blue-900 mb-4">Cavaleiros da Verdadeira Luz nº 1200</h3>
+        <div class="space-y-2 mb-6">
+          <p class="small-text"><strong>Loja:</strong> Verdadeira Luz nº 2531 (GOBAM)</p>
+          <p class="small-text"><strong>Reuniões:</strong> Sábados às 15h</p>
+          <p class="small-text text-blue-900"><strong>MC:</strong> Gabriel Dias Rejtman</p>
+        </div>
+      </div>
+      <a href="h1200.html" class="button w-full text-center">História do capítulo</a>
     </article>
 
-    <article class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm">
-      <img src="../assets/images/capitulocvs.png" alt="Capítulo Velha Serpa" class="image-card w-full h-44 object-cover mb-4">
-      <h3 class="text-xl font-semibold text-blue-900 mb-3">Capítulo Cavaleiros da Velha Serpa nº 1229</h3>
-      <p class="text-gray-700 mb-2"><strong>Loja Patrocinadora:</strong> Glória de Hiram nº 19 (GLOMAM)</p>
-      <p class="text-gray-700 mb-2"><strong>Reuniões:</strong> Sábados às 15h</p>
-      <p class="text-gray-700 mb-4"><strong>Mestre Conselheiro:</strong> Hemmanuel dos Santos Fernandes (Jan-Jun/2026)</p>
-      <a href="h1229.html" class="back-button">História do capítulo</a>
+    <article class="card flex flex-col justify-between">
+      <div>
+        <img src="../assets/images/capitulocvs.png" alt="Velha Serpa" class="image-card w-full h-48 object-cover mb-6">
+        <h3 class="text-xl font-bold text-blue-900 mb-4">Cavaleiros da Velha Serpa nº 1229</h3>
+        <div class="space-y-2 mb-6">
+          <p class="small-text"><strong>Loja:</strong> Glória de Hiram nº 19 (GLOMAM)</p>
+          <p class="small-text"><strong>Reuniões:</strong> Sábados às 15h</p>
+          <p class="small-text text-blue-900"><strong>MC:</strong> Hemmanuel dos S. Fernandes</p>
+        </div>
+      </div>
+      <a href="h1229.html" class="button w-full text-center">História do capítulo</a>
     </article>
 
-    <article class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm">
-      <img src="../assets/images/capitulocdj.png" alt="Capítulo Justiça" class="image-card w-full h-44 object-cover mb-4">
-      <h3 class="text-xl font-semibold text-blue-900 mb-3">Capítulo Cavaleiros da Justiça nº 1234</h3>
-      <p class="text-gray-700 mb-2"><strong>Loja Patrocinadora:</strong> Justiça e Verdade nº 27 (GLOMAM)</p>
-      <p class="text-gray-700 mb-2"><strong>Reuniões:</strong> Sábados às 15h</p>
-      <p class="text-gray-700 mb-4"><strong>Mestre Conselheiro:</strong> Kassyano Davi de Mattos Cavalcante (Jan-Jun/2026)</p>
-      <a href="h1234.html" class="back-button">História do capítulo</a>
+    <article class="card flex flex-col justify-between">
+      <div>
+        <img src="../assets/images/capitulocdj.png" alt="Cavaleiros da Justiça" class="image-card w-full h-48 object-cover mb-6">
+        <h3 class="text-xl font-bold text-blue-900 mb-4">Cavaleiros da Justiça nº 1234</h3>
+        <div class="space-y-2 mb-6">
+          <p class="small-text"><strong>Loja:</strong> Justiça e Verdade nº 27 (GLOMAM)</p>
+          <p class="small-text"><strong>Reuniões:</strong> Sábados às 15h</p>
+          <p class="small-text text-blue-900"><strong>MC:</strong> Kassyano Davi de M. Cavalcante</p>
+        </div>
+      </div>
+      <a href="h1234.html" class="button w-full text-center">História do capítulo</a>
     </article>
 
-    <article class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm">
-      <img src="../assets/images/capitulocds.png" alt="Capítulo Solimões" class="image-card w-full h-44 object-cover mb-4">
-      <h3 class="text-xl font-semibold text-blue-900 mb-3">Capítulo Cavaleiros do Solimões nº 1251</h3>
-      <p class="text-gray-700 mb-2"><strong>Loja Patrocinadora:</strong> Glória do Solimões nº 49 (GLOMAM)</p>
-      <p class="text-gray-700 mb-2"><strong>Reuniões:</strong> Domingos às 13h</p>
-      <p class="text-gray-700 mb-4"><strong>Mestre Conselheiro:</strong> José Jorge Caroll Vidal da Rocha (Jan-Jun/2026)</p>
-      <a href="h1251.html" class="back-button">História do capítulo</a>
+    <article class="card flex flex-col justify-between">
+      <div>
+        <img src="../assets/images/capitulocds.png" alt="Solimões" class="image-card w-full h-48 object-cover mb-6">
+        <h3 class="text-xl font-bold text-blue-900 mb-4">Cavaleiros do Solimões nº 1251</h3>
+        <div class="space-y-2 mb-6">
+          <p class="small-text"><strong>Loja:</strong> Glória do Solimões nº 49 (GLOMAM)</p>
+          <p class="small-text"><strong>Reuniões:</strong> Domingos às 13h</p>
+          <p class="small-text text-blue-900"><strong>MC:</strong> José Jorge Caroll Vidal da Rocha</p>
+        </div>
+      </div>
+      <a href="h1251.html" class="button w-full text-center">História do capítulo</a>
     </article>
+
+        <article class="card flex flex-col justify-between">
+      <div>
+        <img src="../assets/images/capitulocds.png" alt="Solimões" class="image-card w-full h-48 object-cover mb-6">
+        <h3 class="text-xl font-bold text-blue-900 mb-4">Protetores do Rio do Ouro n. 1252</h3>
+        <div class="space-y-2 mb-6">
+          <p class="small-text"><strong>Loja:</strong> Glória do Solimões nº 49 (GLOMAM)</p>
+          <p class="small-text"><strong>Reuniões:</strong> Domingos às 13h</p>
+          <p class="small-text text-blue-900"><strong>MC:</strong> José Jorge Caroll Vidal da Rocha</p>
+        </div>
+      </div>
+      <a href="h1251.html" class="button w-full text-center">História do capítulo</a>
+    </article>
+
   </section>
+
+  <div class="mt-16 text-center">
+    <a href="#" class="button-secondary">
+      Voltar ao Topo
+    </a>
+  </div>
 </main>
 
 <div data-component="footer"></div>
@@ -145,6 +222,3 @@
 <script src="../assets/js/components.js"></script>
 </body>
 </html>
-
-
-

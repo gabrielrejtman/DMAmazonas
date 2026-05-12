@@ -7,140 +7,178 @@
   <link rel="icon" href="../assets/images/logo.png" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../assets/css/styles.css">
+  <style>
+    @media (max-width: 640px) {
+      main { padding-left: 1rem; padding-right: 1rem; }
+    }
+    .card, .bg-white { word-break: break-word; overflow-wrap: break-word; }
+
+    /* Mobile: cards de clubes empilham */
+    @media (max-width: 640px) {
+      .clube-row { flex-direction: column !important; align-items: center !important; text-align: center; }
+      .clube-row .info-grid { grid-template-columns: 1fr !important; text-align: left; }
+    }
+    /* Mobile: feature-list grid vira coluna única */
+    @media (max-width: 640px) {
+      .feature-list.grid { display: block !important; }
+    }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-<!-- CABEÇALHO -->
 <div data-component="header"></div>
 
-<!-- CONTEÚDO -->
 <main class="container mx-auto px-6 py-12">
-  <h1 class="text-2xl md:text-4xl font-bold text-blue-900 mb-6 md:mb-8">Clube de Mães e Amigos</h1>
-  
-  <article class="bg-white rounded-lg shadow-lg p-4 md:p-8 mb-8"> <p class="text-lg leading-relaxed text-gray-700 mb-6">
-    O interesse dos pais no bem-estar dos filhos inspirou a ideia de organizar as mães, os pais e os amigos numa atividades única. Ao longo dos anos, as mães e pais provaram ser uma fonte de força para os Capítulos e uma adição real na equipe de liderança adulta.
 
- <p class="text-lg leading-relaxed text-gray-700 mb-6">Clubes de Mães e Amigos combinam as energias e talentos de mães e pais, tutores e padrastos. Trabalhando juntos, esses pais podem ajudar o Conselho Consultivo e o Capítulo.
-<img src="../assets/images/clubedemaes.png" width="200" class="imagem-contorno" style="float: right;">
- <p class="text-lg leading-relaxed text-gray-700 mb-6">O verdadeiros propósito dos clubes são cooperar, assistir o Capítulo e seus membros, servi-lo e fortalecer o interesse de cada membro na Ordem DeMolay.
+  <article class="card p-0 overflow-hidden mb-16">
+    <div class="flex flex-col lg:flex-row lg:items-stretch">
+      <div class="w-full lg:w-1/3 bg-pink-50 flex justify-center items-center">
+        <img src="../assets/images/clubedemaes.png" alt="Clube de Mães" class="w-full h-full object-cover">
+      </div>
+      <div class="p-8 lg:p-12 lg:w-2/3 flex flex-col justify-center">
+        <h1 class="text-3xl md:text-5xl font-bold text-blue-900 mb-6 m-0">Clube de Mães e Amigos</h1>
+        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+          O interesse dos pais no bem-estar dos filhos inspirou a ideia de organizar as mães, os pais e os amigos numa atividade única. Ao longo dos anos, provaram ser uma fonte de força para os Capítulos e uma adição real na equipe de liderança adulta.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+          Clubes de Mães e Amigos combinam as energias e talentos de mães e pais, tutores e padrastos. Trabalhando juntos, esses pais podem ajudar o Conselho Consultivo e o Capítulo.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          O contato do Clube com o Capítulo se dá através do Presidente do Conselho e o Mestre Conselheiro. Cada Clube está sujeito à autoridade do Conselho Consultivo.
+        </p>
+      </div>
+    </div>
+  </article>
 
- <p class="text-lg leading-relaxed text-gray-700 mb-6">O contato do Clube com o Capítulo se dá através do Presidente do Conselho e o Mestre Conselheiro. Cada Clube esta sujeito à autoridade do Conselho Consultivo, de modo que as suas atividades devem ser definidas em conjunto.
+  <article class="card mb-12">
+    <h2 class="section-title">Como um Clube proporciona serviço</h2>
+    <ul class="feature-list grid grid-cols-1 md:grid-cols-2 gap-x-8">
+      <li>Incentivar os DeMolays a assistirem as Reuniões do Capítulo.</li>
+      <li>Estimular interesse em outras atividades.</li>
+      <li>Adquirir itens para tornar as atividades mais agradáveis e produtivas.</li>
+      <li>Limpar e reparar os paramentos do Capítulo.</li>
+      <li>Auxiliar os membros nos gastos dos Conclaves e Conferências.</li>
+      <li>Responsabilizar-se pelas medalhas ou prêmios em competições.</li>
+      <li>Providenciar entretenimento nas atividades regulares.</li>
+    </ul>
+  </article>
 
- <p class="text-lg leading-relaxed text-gray-700 mb-6">Os Clubes de Mães e Amigos geralmente têm cuidado da comida para depois das reuniões e atividades sociais. Contudo, há outras formas de como um Clube pode proporcionar serviço a um Capítulo:
+  <section>
+    <h2 class="text-2xl md:text-3xl font-bold text-blue-900 mb-8">Clubes de Mães e Amigos do Amazonas</h2>
 
-</p>
+    <div class="content-grid">
 
-<ul class="text-lg leading-relaxed text-gray-700 mb-6 ml-6 space-y-2">
+      <div class="card flex flex-col md:flex-row gap-6 items-center md:items-start clube-row">
+        <img src="../assets/images/clubemarjorie.png" alt="Logo Clube" class="w-32 h-32 object-contain flex-shrink-0">
+        <div class="flex-1">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 m-0">Tia Marjorie Fróes nº 29</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 info-grid">
+            <p class="small-text m-0"><strong>Capítulo Patrocinador:</strong> Filhos das Águas nº 926</p>
+            <p class="small-text m-0"><strong>Data de Fundação:</strong> 16/12/2016</p>
+            <p class="small-text m-0"><strong>Data de Instalação:</strong> 16/12/2016</p>
+            <p class="small-text m-0"><strong>Primeira(o) Presidente:</strong> Sem Informação</p>
+            <p class="small-text m-0"><strong>Atual Presidente:</strong> Sem Informação</p>
+            <p class="small-text m-0"><strong>Mandato:</strong> Sem Informação</p>
+          </div>
+        </div>
+      </div>
 
-<li>✓ Incentivar os DeMolays a assistirem as Reuniões do Capítulo.</li>
+      <div class="card flex flex-col md:flex-row gap-6 items-center md:items-start clube-row">
+        <img src="../assets/images/clubecinza.png" alt="Logo Clube" class="w-32 h-32 object-contain flex-shrink-0 opacity-75">
+        <div class="flex-1">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 m-0">Amazonas nº 57</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 info-grid">
+            <p class="small-text m-0"><strong>Capítulo Patrocinador:</strong> Ajuricaba/Amazonas nº 263</p>
+            <p class="small-text m-0"><strong>Data de Fundação:</strong> 21/09/2017</p>
+            <p class="small-text m-0"><strong>Data de Instalação:</strong> 07/10/2017</p>
+            <p class="small-text m-0"><strong>Primeira(o) Presidente:</strong> Sem Informação</p>
+            <p class="small-text m-0"><strong>Atual Presidente:</strong> Sem Informação</p>
+            <p class="small-text m-0"><strong>Mandato:</strong> Sem Informação</p>
+          </div>
+        </div>
+      </div>
 
-<li>✓ Estimular interesse em outras atividades.</li>
+      <div class="card flex flex-col md:flex-row gap-6 items-center md:items-start clube-row">
+        <img src="../assets/images/clubecinza.png" alt="Logo Clube" class="w-32 h-32 object-contain flex-shrink-0 opacity-75">
+        <div class="flex-1">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 m-0">Guardiãs das Esmeraldas nº 262</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 info-grid">
+            <p class="small-text m-0"><strong>Capítulo Patrocinador:</strong> Filhos do Verde Amazônico nº 43</p>
+            <p class="small-text m-0"><strong>Data de Fundação:</strong> 17/11/2019</p>
+            <p class="small-text m-0"><strong>Data de Instalação:</strong> 01/12/2019</p>
+            <p class="small-text m-0"><strong>Primeira(o) Presidente:</strong> Sem Informação</p>
+            <p class="small-text m-0"><strong>Atual Presidente:</strong> Sem Informação</p>
+            <p class="small-text m-0"><strong>Mandato:</strong> Sem Informação</p>
+          </div>
+        </div>
+      </div>
 
-<li>✓ Adquirir vários itens para o Capítulo para tornar as atividades dos Capítulos mais agradável e produtiva.</li>
+      <div class="card flex flex-col md:flex-row gap-6 items-center md:items-start clube-row">
+        <img src="../assets/images/guardias-verdadeira-luz-semfundo.png" alt="Logo Clube" class="w-32 h-32 object-contain flex-shrink-0">
+        <div class="flex-1">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 m-0">Guardiãs da Verdadeira Luz nº 371</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 info-grid">
+            <p class="small-text m-0"><strong>Capítulo Patrocinador:</strong> Cavaleiros da Verdadeira Luz nº 1200</p>
+            <p class="small-text m-0"><strong>Data de Fundação:</strong> 04/02/2023</p>
+            <p class="small-text m-0"><strong>Data de Instalação:</strong> 22/04/2023</p>
+            <p class="small-text m-0"><strong>Primeira(o) Presidente:</strong> Sem Informação</p>
+            <p class="small-text m-0"><strong>Atual Presidente:</strong> Rosanna Hayden</p>
+            <p class="small-text m-0"><strong>Mandato:</strong> Sem Informação</p>
+          </div>
+        </div>
+      </div>
 
-<li>✓ Limpar e reparar os paramentos do Capítulo.</li>
+      <div class="card flex flex-col md:flex-row gap-6 items-center md:items-start clube-row">
+        <img src="../assets/images/clubecinza.png" alt="Logo Clube" class="w-32 h-32 object-contain flex-shrink-0 opacity-75">
+        <div class="flex-1">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 m-0">Rosimar Bezerra nº 403</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 info-grid">
+            <p class="small-text m-0"><strong>Capítulo Patrocinador:</strong> Cidade de Manaus nº 26</p>
+            <p class="small-text m-0"><strong>Data de Fundação:</strong> 05/08/2023</p>
+            <p class="small-text m-0"><strong>Data de Instalação:</strong> 13/01/2024</p>
+            <p class="small-text m-0"><strong>Primeira(o) Presidente:</strong> Sem Informação</p>
+            <p class="small-text m-0"><strong>Atual Presidente:</strong> Sem Informação</p>
+            <p class="small-text m-0"><strong>Mandato:</strong> Sem Informação</p>
+          </div>
+        </div>
+      </div>
 
-<li>✓ Auxiliar os membros nos gastos dos Conclaves e Conferências de Treinamento de Lideranças.<li>
+      <div class="card flex flex-col md:flex-row gap-6 items-center md:items-start clube-row">
+        <img src="../assets/images/clubecinza.png" alt="Logo Clube" class="w-32 h-32 object-contain flex-shrink-0 opacity-75">
+        <div class="flex-1">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 m-0">Estrelas da Esperança nº 424</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 info-grid">
+            <p class="small-text m-0"><strong>Capítulo Patrocinador:</strong> Unidos Na Esperança nº 29</p>
+            <p class="small-text m-0"><strong>Data de Fundação:</strong> 06/04/2024</p>
+            <p class="small-text m-0"><strong>Data de Instalação:</strong> 10/05/2024</p>
+            <p class="small-text m-0"><strong>Primeira(o) Presidente:</strong> Sem Informação</p>
+            <p class="small-text m-0"><strong>Atual Presidente:</strong> Sem Informação</p>
+            <p class="small-text m-0"><strong>Mandato:</strong> Sem Informação</p>
+          </div>
+        </div>
+      </div>
 
-<li>✓ Responsabilizar-se pelas medalhas ou prêmios para competições jurisdicionais ou locais.</li>
+      <div class="card flex flex-col md:flex-row gap-6 items-center md:items-start clube-row">
+        <img src="../assets/images/clubecinza.png" alt="Logo Clube" class="w-32 h-32 object-contain flex-shrink-0 opacity-75">
+        <div class="flex-1">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 m-0">Primeira Virtude nº 429</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 info-grid">
+            <p class="small-text m-0"><strong>Capítulo Patrocinador:</strong> Forte de Ega nº 1186</p>
+            <p class="small-text m-0"><strong>Data de Fundação:</strong> 20/04/2024</p>
+            <p class="small-text m-0"><strong>Data de Instalação:</strong> 15/06/2024</p>
+            <p class="small-text m-0"><strong>Primeira(o) Presidente:</strong> Sem Informação</p>
+            <p class="small-text m-0"><strong>Atual Presidente:</strong> Sem Informação</p>
+            <p class="small-text m-0"><strong>Mandato:</strong> Sem Informação</p>
+          </div>
+        </div>
+      </div>
 
-<li>✓ Providenciar entretenimento nas atividades regulares.</li>
+    </div>
+  </section>
 
-   </p>
-<br><br>
-    <h2 class="text-2xl font-bold text-blue-900 mb-4 mt-6">Clube de Mães e Amigos</h2>
- 
-<table>
-
-<tr><td width="160" ><img src="../assets/images/clubemarjorie.png" width="150" class="imagem-contorno"></td>
-<td><b>Nome do Clube:</b> Tia Marjorie Fróes nº. 29
-<br><b>Capítulo DeMolay Patrocinador:</b> Filhos das Águas nº. 926
-<br><b>Data de Fundação:</b> 16/12/2016
-<br><b>Data de Instalação:</b> 16/12/2016
-<br><b>Primeira(o) Presidente:</b> Sem Informação
-<br><b>Atual Presidente:</b> Sem Informação
-<br><b>Atual Mandato:</b> Sem Informação<br><br></td>
-</tr>
-
-<tr><td width="160" ><img src="../assets/images/clubecinza.png" width="150" class="imagem-contorno"></td>
-<td><b>Nome do Clube:</b> Amazonas nº. 57
-<br><b>Capítulo DeMolay Patrocinador:</b> Ajuricaba/Amazonas nº. 263
-<br><b>Data de Fundação:</b> 21/09/2017
-<br><b>Data de Instalação:</b> 07/10/2017
-<br><b>Primeira(o) Presidente:</b> Sem Informação
-<br><b>Atual Presidente:</b> Sem Informação
-<br><b>Atual Mandato:</b> Sem Informação<br><br></td>
-</tr>
-
-<tr><td width="160" ><img src="../assets/images/clubecinza.png" width="150" class="imagem-contorno"></td>
-<td><b>Nome do Clube:</b> Guardiãs das Esmeraldas nº. 262
-<br><b>Capítulo DeMolay Patrocinador:</b> Filhos do Verde Amazônico nº. 43
-<br><b>Data de Fundação:</b> 17/11/2019
-<br><b>Data de Instalação:</b> 01/12/2019
-<br><b>Primeira(o) Presidente:</b> Sem Informação
-<br><b>Atual Presidente:</b> Sem Informação
-<br><b>Atual Mandato:</b> Sem Informação<br><br></td>
-</tr>
-
-<tr><td width="160" ><img src="../assets/images/guardias-verdadeira-luz.jpeg" width="150" class="imagem-contorno"></td>
-<td><b>Nome do Clube:</b> Guardiãs da Verdadeira Luz nº. 371
-<br><b>Capítulo DeMolay Patrocinador:</b> Cavaleiros da Verdadeira Luz nº. 1200
-<br><b>Data de Fundação:</b> 04/02/2023
-<br><b>Data de Instalação:</b> 22/04/2023
-<br><b>Primeira(o) Presidente:</b> Sem Informação
-<br><b>Atual Presidente:</b> Sem Informação
-<br><b>Atual Mandato:</b> Sem Informação<br><br></td>
-</tr>
-
-
-<tr><td width="160" ><img src="../assets/images/clubecinza.png" width="150" class="imagem-contorno"></td>
-<td><b>Nome do Clube:</b> Cidade de Manaus - Rosimar Bezerra nº. 403
-<br><b>Capítulo DeMolay Patrocinador:</b> Cidade de Manaus nº. 26
-<br><b>Data de Fundação:</b> 05/08/2023
-<br><b>Data de Instalação:</b> 13/01/2024
-<br><b>Primeira(o) Presidente:</b> Sem Informação
-<br><b>Atual Presidente:</b> Sem Informação
-<br><b>Atual Mandato:</b> Sem Informação<br><br></td>
-</tr>
-
-
-<tr><td width="160" ><img src="../assets/images/clubecinza.png" width="150" class="imagem-contorno"></td>
-<td><b>Nome do Clube:</b> Estrelas da Esperança nº. 424
-<br><b>Capítulo DeMolay Patrocinador:</b> Unidos Na Esperança nº. 29
-<br><b>Data de Fundação:</b> 06/04/2024
-<br><b>Data de Instalação:</b> 10/05/2024
-<br><b>Primeira(o) Presidente:</b> Sem Informação
-<br><b>Atual Presidente:</b> Sem Informação
-<br><b>Atual Mandato:</b> Sem Informação<br><br></td>
-</tr>
-
-
-<tr><td width="160" ><img src="../assets/images/clubecinza.png" width="150" class="imagem-contorno"></td>
-<td><b>Nome do Clube:</b> Primeira Virtude nº. 429
-<br><b>Capítulo DeMolay Patrocinador:</b> Forte de Ega nº. 1186
-<br><b>Data de Fundação:</b> 20/04/2024
-<br><b>Data de Instalação:</b> 15/06/2024
-<br><b>Primeira(o) Presidente:</b> Sem Informação
-<br><b>Atual Presidente:</b> Sem Informação
-<br><b>Atual Mandato:</b> Sem Informação<br><br></td>
-</tr>
-
-</table>
-    
-     </article>
 </main>
 
-<!-- RODAPÉ -->
 <div data-component="footer"></div>
-
-<!-- SCRIPTS -->
 <script src="../assets/js/components.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-

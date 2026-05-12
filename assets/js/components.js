@@ -9,11 +9,14 @@ function renderHeader() {
 
   const headerHTML = `
     <header class="border-t-4 border-blue-900 bg-white shadow-sm relative z-50">
-      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <div class="container mx-auto flex justify-between items-center py-4 px-0">
 
-        <!-- LOGO -->
-        <a href="${rootHref}" class="flex items-center gap-3" aria-label="Voltar para a página inicial DeMolay Amazonas">
-          <img src="${assetHref('images/logo.png')}" alt="DeMolay Amazonas" class="h-10 w-auto">
+        <a href="${rootHref}" class="flex items-center" aria-label="Voltar para a página inicial DeMolay Amazonas">
+          <img 
+            src="${assetHref('images/logo.png')}" 
+            alt="DeMolay Amazonas" 
+            class="h-10 w-auto object-contain -ml-3"
+          >
         </a>
 
         <!-- HAMBURGER (mobile only) -->
@@ -40,15 +43,16 @@ function renderHeader() {
                 <li><a href="${pageHref('gabinete-estadual.html')}" class="block px-4 py-2 hover:bg-gray-100">Gabinete Estadual</a></li>
                 <li><a href="${pageHref('historia-capitulos.html')}" class="block px-4 py-2 hover:bg-gray-100">Capítulos</a></li>
                 <li><a href="${pageHref('priorados-nobres-cavaleiros.html')}" class="block px-4 py-2 hover:bg-gray-100">Priorados</a></li>
-                <li><a href="${pageHref('alumni.html')}" class="block px-4 py-2 hover:bg-gray-100">DeMolay Alumni</a></li>
                 <li><a href="${pageHref('castelos-escudeiros.html')}" class="block px-4 py-2 hover:bg-gray-100">Castelos de Escudeiros</a></li>
                 <li><a href="${pageHref('clube-maes-amigos.html')}" class="block px-4 py-2 hover:bg-gray-100">Clube de Mães e Amigos</a></li>
-                <li><a href="${pageHref('academia-amazonense-demolay-letras.html')}" class="block px-4 py-2 hover:bg-gray-100">Academia de Letras</a></li>
                 <li><a href="${pageHref('corte-chevaliers.html')}" class="block px-4 py-2 hover:bg-gray-100">Corte de Chevaliers</a></li>
+                <li><a href="${pageHref('academia-amazonense-demolay-letras.html')}" class="block px-4 py-2 hover:bg-gray-100">Academia de Letras</a></li>
+                <li><a href="${pageHref('alumni.html')}" class="block px-4 py-2 hover:bg-gray-100">DeMolay Alumni</a></li>
               </ul>
             </li>
             <li><a href="${pageHref('eventos.html')}" class="hover:text-blue-900 border-b-2 border-transparent hover:border-red-700">Eventos</a></li>
             <li><a href="https://ocaminhocomecaaqui.com.br" target="_blank" rel="noopener noreferrer" class="hover:text-blue-900 border-b-2 border-transparent hover:border-red-700">Seja um DeMolay</a></li>
+            <li><a href="${pageHref('fead-doacoes.html')}" class="hover:text-blue-900 border-b-2 border-transparent hover:border-red-700">Fundo de Amparo</a></li>
             <li><a href="${pageHref('fale-conosco.html')}" class="hover:text-blue-900 border-b-2 border-transparent hover:border-red-700">Fale Conosco</a></li>
           </ul>
         </nav>
@@ -66,15 +70,16 @@ function renderHeader() {
               <li><a href="${pageHref('gabinete-estadual.html')}" class="block px-8 py-2 hover:bg-gray-50 hover:text-blue-900">Gabinete Estadual</a></li>
               <li><a href="${pageHref('historia-capitulos.html')}" class="block px-8 py-2 hover:bg-gray-50 hover:text-blue-900">Capítulos DeMolays</a></li>
               <li><a href="${pageHref('priorados-nobres-cavaleiros.html')}" class="block px-8 py-2 hover:bg-gray-50 hover:text-blue-900">Priorados de Nobres Cavaleiros</a></li>
-              <li><a href="${pageHref('alumni.html')}" class="block px-8 py-2 hover:bg-gray-50 hover:text-blue-900">DeMolay Alumni Amazonas</a></li>
               <li><a href="${pageHref('castelos-escudeiros.html')}" class="block px-8 py-2 hover:bg-gray-50 hover:text-blue-900">Castelos de Escudeiros</a></li>
               <li><a href="${pageHref('clube-maes-amigos.html')}" class="block px-8 py-2 hover:bg-gray-50 hover:text-blue-900">Clube de Mães e Amigos</a></li>
-              <li><a href="${pageHref('academia-amazonense-demolay-letras.html')}" class="block px-8 py-2 hover:bg-gray-50 hover:text-blue-900">Academia Amazonense DeMolay de Letras</a></li>
               <li><a href="${pageHref('corte-chevaliers.html')}" class="block px-8 py-2 hover:bg-gray-50 hover:text-blue-900">Corte de Chevaliers</a></li>
+              <li><a href="${pageHref('academia-amazonense-demolay-letras.html')}" class="block px-8 py-2 hover:bg-gray-50 hover:text-blue-900">Academia Amazonense DeMolay de Letras</a></li>
+              <li><a href="${pageHref('alumni.html')}" class="block px-8 py-2 hover:bg-gray-50 hover:text-blue-900">DeMolay Alumni Amazonas</a></li>
             </ul>
           </li>
           <li><a href="${pageHref('eventos.html')}" class="block px-6 py-3 hover:bg-gray-50 hover:text-blue-900">Eventos</a></li>
           <li><a href="https://ocaminhocomecaaqui.com.br" target="_blank" rel="noopener noreferrer" class="block px-6 py-3 hover:bg-gray-50 hover:text-blue-900">Seja um DeMolay</a></li>
+          <li><a href="${pageHref('fead-doacoes.html')}" class="block px-6 py-3 hover:bg-gray-50 hover:text-blue-900">Fundo de Amparo</a></li>
           <li><a href="${pageHref('fale-conosco.html')}" class="block px-6 py-3 hover:bg-gray-50 hover:text-blue-900">Fale Conosco</a></li>
         </ul>
       </nav>

@@ -10,174 +10,184 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-<!-- CABEÇALHO -->
 <div data-component="header"></div>
 
-<!-- CONTEÚDO -->
 <main class="container mx-auto px-6 py-12">
-  <h1 class="text-2xl md:text-4xl font-bold text-blue-900 mb-6 md:mb-8">Fale Conosco</h1>
   
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-    <!-- Formulário de Contato -->
-    <article class="bg-white rounded-lg shadow-lg p-4 md:p-8">
-      <h2 class="text-2xl font-bold text-blue-900 mb-6">Envie uma Mensagem</h2>
+    
 
-      <!-- Mensagem de sucesso -->
-      <div id="form-success" class="hidden bg-green-100 border border-green-400 text-green-800 rounded-lg px-4 py-3 mb-4">
-        ✅ Mensagem enviada com sucesso! Entraremos em contato em breve.
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+    
+    <article class="lg:col-span-2 card p-8 md:p-10">
+      
+      <h2 class="text-2xl font-bold text-blue-900 mb-6">Fale Conosco</h2>
+
+      <div id="form-success" class="hidden bg-green-50 border border-green-200 text-green-700 rounded-2xl px-6 py-4 mb-6">
+        <div class="flex items-center gap-3">
+          <span class="text-xl">✅</span>
+          <p class="font-medium">Mensagem enviada com sucesso! Entraremos em contato em breve.</p>
+        </div>
       </div>
-      <!-- Mensagem de erro -->
-      <div id="form-error" class="hidden bg-red-100 border border-red-400 text-red-800 rounded-lg px-4 py-3 mb-4">
-        ❌ Ocorreu um erro ao enviar a mensagem. Tente novamente ou entre em contato por email.
+      
+      <div id="form-error" class="hidden bg-red-50 border border-red-200 text-red-700 rounded-2xl px-6 py-4 mb-6">
+        <div class="flex items-center gap-3">
+          <span class="text-xl">❌</span>
+          <p class="font-medium">Ocorreu um erro ao enviar. Tente novamente ou use nosso email direto.</p>
+        </div>
       </div>
 
-      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-        <!-- Web3Forms: gere sua chave gratuita em web3forms.com com o email gceam@demolaybrasil.org.br -->
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
         <input type="hidden" name="access_key" value="26907bba-f9f4-4600-b7ad-82d59f30c836">
         <input type="hidden" name="subject" value="Contato via site DeMolay Amazonas">
         <input type="hidden" name="from_name" value="Site DeMolay Amazonas">
         <input type="checkbox" name="botcheck" style="display:none">
 
-        <div>
-          <label for="name" class="block text-gray-700 font-semibold mb-2">Nome</label>
-          <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900" placeholder="Seu nome completo">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div>
+            <label for="name" class="block text-sm font-bold text-blue-900 uppercase tracking-wide mb-2">Nome</label>
+            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none transition" placeholder="Seu nome completo">
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-bold text-blue-900 uppercase tracking-wide mb-2">Email</label>
+            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none transition" placeholder="seu@email.com">
+            <span id="email-error" class="hidden text-red-600 text-xs mt-1 font-medium">Digite um email válido.</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div>
+            <label for="phone" class="block text-sm font-bold text-blue-900 uppercase tracking-wide mb-2">Telefone (Opcional)</label>
+            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none transition" placeholder="(92) 9 9999-9999">
+            <span id="phone-error" class="hidden text-red-600 text-xs mt-1 font-medium">Número incompleto.</span>
+          </div>
+
+          <div>
+            <label for="subject_select" class="block text-sm font-bold text-blue-900 uppercase tracking-wide mb-2">Assunto</label>
+            <select id="subject_select" name="subject_select" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none transition bg-white">
+              <option value="">Selecione um assunto</option>
+              <option value="informacoes">Informações sobre a Ordem</option>
+              <option value="adesao">Quero Ser DeMolay</option>
+              <option value="eventos">Eventos</option>
+              <option value="sugestoes">Sugestões e Comentários</option>
+              <option value="outros">Outros</option>
+            </select>
+          </div>
         </div>
 
         <div>
-          <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
-          <input type="email" id="email" name="email" required
-            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900"
-            placeholder="seu.email@example.com"
-            autocomplete="email">
-          <span id="email-error" class="hidden text-red-600 text-sm mt-1">Digite um email válido.</span>
+          <label for="message" class="block text-sm font-bold text-blue-900 uppercase tracking-wide mb-2">Mensagem</label>
+          <textarea id="message" name="message" required rows="4" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none transition" placeholder="Como podemos ajudar?"></textarea>
         </div>
 
-        <div>
-          <label for="phone" class="block text-gray-700 font-semibold mb-2">Telefone (Opcional)</label>
-          <input type="tel" id="phone" name="phone"
-            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900"
-            placeholder="(92) 9 9999-9999"
-            maxlength="16"
-            autocomplete="tel">
-          <span id="phone-error" class="hidden text-red-600 text-sm mt-1">Número incompleto.</span>
-        </div>
-
-        <div>
-          <label for="subject" class="block text-gray-700 font-semibold mb-2">Assunto</label>
-          <select id="subject" name="subject" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900">
-            <option value="">Selecione um assunto</option>
-            <option value="informacoes">Informações sobre a Ordem</option>
-            <option value="adesao">Quero Ser DeMolay</option>
-            <option value="eventos">Eventos</option>
-            <option value="sugestoes">Sugestões e Comentários</option>
-            <option value="outros">Outros</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="message" class="block text-gray-700 font-semibold mb-2">Mensagem</label>
-          <textarea id="message" name="message" required rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900" placeholder="Sua mensagem aqui..."></textarea>
-        </div>
-
-        <button type="submit" id="submit-btn" class="w-full bg-blue-900 text-white font-bold py-3 rounded-lg hover:bg-red-700 transition">
+        <button type="submit" id="submit-btn" class="button w-full py-4 text-lg">
           Enviar Mensagem
         </button>
       </form>
     </article>
 
-    <!-- Informações de Contato -->
-    <article class="bg-white rounded-lg shadow-lg p-4 md:p-8">
-      <h2 class="text-2xl font-bold text-blue-900 mb-6">Informações de Contato</h2>
-      
-      <div class="space-y-6">
-        <div>
-          <h3 class="text-lg font-bold text-blue-900 mb-2">📍 Endereço</h3>
-          <p class="text-gray-700">
-            Grande Loja Maçônica do Amazonas<br>
-            Av. Prof. Nilton Lins, 1655 - Flores<br>
-            Manaus - AM, Brasil
-          </p>
-        </div>
-
-        <div>
-          <h3 class="text-lg font-bold text-blue-900 mb-2">📞 Telefone</h3>
-          <p class="text-gray-700">
-            <a href="tel:(92)3000-0000" class="text-blue-900 hover:text-red-700">(92) 98159-1015</a>
-          </p>
-        </div>
-
-        <div>
-          <h3 class="text-lg font-bold text-blue-900 mb-2">✉️ Email</h3>
-          <p class="text-gray-700">
-            <a href="mailto:gceam@demolaybrasil.org.br" class="text-blue-900 hover:text-red-700">gce@demolayamazonas.org.br</a>
-          </p>
-        </div>
-
-        <div>
-          <h3 class="text-lg font-bold text-blue-900 mb-2">🌐 Redes Sociais</h3>
+    <aside class="space-y-6">
+      <div class="card p-8 bg-blue-900 text-white border-none">
+        <h2 class="text-xl font-bold mb-6 text-white m-0">Canais Diretos</h2>
+        
+        <div class="space-y-6">
           <div class="flex gap-4">
-            <a href="https://www.instagram.com/demolay.amazonas/" target="_blank" class="text-gray-700 hover:text-blue-900 transition">
-              <img src="../assets/images/instagram.png" alt="Instagram" class="h-6 w-6">
+            <span class="text-2xl text-red-500">📍</span>
+            <div>
+              <h4 class="font-bold text-sm uppercase tracking-widest text-red-500">Endereço</h4>
+              <p class="text-gray-200 text-sm leading-relaxed mt-1">
+                Grande Loja Maçônica do Amazonas<br>
+                Av. Prof. Nilton Lins, 1645 - Flores<br>
+                CEP: 69.058-030. Manaus - AM
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <span class="text-2xl text-red-500">✉️</span>
+            <div>
+              <h4 class="font-bold text-sm uppercase tracking-widest text-red-500">Email</h4>
+              <a href="mailto:gce@demolayamazonas.org.br" class="text-white hover:text-red-400 transition block mt-1">gce@demolayamazonas.org.br</a>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <span class="text-2xl text-red-500">📞</span>
+            <div>
+              <h4 class="font-bold text-sm uppercase tracking-widest text-red-500">Telefone</h4>
+              <a href="tel:92981591015" class="text-white hover:text-red-400 transition block mt-1">(92) 98159-1015</a>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-blue-800 flex flex-col gap-3">
+            <h4 class="font-bold text-sm uppercase tracking-widest text-red-500">Redes Sociais</h4>
+            <a href="https://www.instagram.com/demolay.amazonas/" target="_blank" class="flex items-center gap-2 text-white hover:text-red-400 transition">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c.796 0 1.441.645 1.441 1.44s-.645 1.44-1.441 1.44c-.795 0-1.439-.645-1.439-1.44s.644-1.44 1.439-1.44z"/></svg>
+              @demolay.amazonas
             </a>
           </div>
         </div>
       </div>
-    </article>
+    </aside>
   </div>
 
-  <!-- Informações Adicionais -->
-  <article class="bg-white rounded-lg shadow-lg p-4 md:p-8 mb-8">
-    <h2 class="text-2xl font-bold text-blue-900 mb-6">Perguntas Frequentes</h2>
-    
-    <div class="space-y-6">
-      <div>
-        <h3 class="text-lg font-bold text-blue-900 mb-2">Como faço para ser membro da Ordem DeMolay?</h3>
-        <p class="text-gray-700">
-          Você pode se candidatar a ser DeMolay visitando um de nossos Capítulos ou entrando em contato conosco. 
-          Visite também <a href="https://ocaminhocomecaaqui.com.br" target="_blank" class="text-blue-900 hover:text-red-700">ocaminhocomecaaqui.com.br</a> para mais informações.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="text-lg font-bold text-blue-900 mb-2">Qual é a idade mínima para ser DeMolay?</h3>
-        <p class="text-gray-700">
-          A idade mínima é 12 anos e a máxima é 21 anos. Existem também programas para crianças mais jovens.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="text-lg font-bold text-blue-900 mb-2">Qual é o custo para ser membro?</h3>
-        <p class="text-gray-700">
-          Os custos variam de acordo com o Capítulo. Para informações específicas sobre taxas, 
-          entre em contato conosco diretamente.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="text-lg font-bold text-blue-900 mb-2">Posso participar de eventos sem ser membro?</h3>
-        <p class="text-gray-700">
-          Sim! Muitos de nossos eventos comunitários são abertos ao público. Entre em contato para 
-          saber sobre próximos eventos que você possa participar.
-        </p>
-      </div>
+  <section class="max-w-4xl mx-auto">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold text-blue-900">Perguntas Frequentes</h2>
+      <p class="text-gray-500 mt-2">Tire suas dúvidas rapidamente</p>
     </div>
-  </article>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <article class="card p-6 border-l-4 border-l-red-700">
+        <h3 class="text-lg font-bold text-blue-900 mb-2 m-0">Como faço para ser membro?</h3>
+        <p class="text-gray-600 text-sm leading-relaxed m-0">
+          Você pode se candidatar visitando um de nossos Capítulos ou visitando <a href="https://ocaminhocomecaaqui.com.br" target="_blank" class="text-blue-900 font-bold hover:underline">ocaminhocomecaaqui.com.br</a> para mais informações.
+        </p>
+      </article>
+
+      <article class="card p-6 border-l-4 border-l-red-700">
+        <h3 class="text-lg font-bold text-blue-900 mb-2 m-0">Qual é a idade mínima?</h3>
+        <p class="text-gray-600 text-sm leading-relaxed m-0">
+          A idade mínima é 12 anos e a máxima é 21 anos. Existem também programas para crianças mais jovens (Escudeiros).
+        </p>
+      </article>
+
+      <article class="card p-6 border-l-4 border-l-red-700">
+        <h3 class="text-lg font-bold text-blue-900 mb-2 m-0">Qual é o custo para ser membro?</h3>
+        <p class="text-gray-600 text-sm leading-relaxed m-0">
+          Os custos variam de acordo com o Capítulo. Para informações específicas sobre taxas e iniciação, entre em contato conosco diretamente.
+        </p>
+      </article>
+
+      <article class="card p-6 border-l-4 border-l-red-700">
+        <h3 class="text-lg font-bold text-blue-900 mb-2 m-0">Posso participar sem ser membro?</h3>
+        <p class="text-gray-600 text-sm leading-relaxed m-0">
+          Sim! Muitos de nossos eventos comunitários e sociais são abertos ao público. Acompanhe nossas redes para saber as datas.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <div class="mt-16 text-center">
+    <a href="#" class="button-secondary">
+      Voltar ao Topo
+    </a>
+  </div>
 </main>
 
-<!-- RODAPÉ -->
 <div data-component="footer"></div>
 
-<!-- SCRIPTS -->
 <script src="../assets/js/components.js"></script>
 <script>
+  // Script original mantido e otimizado para o novo layout
   const form = document.getElementById('contact-form');
   const submitBtn = document.getElementById('submit-btn');
   const successMsg = document.getElementById('form-success');
   const errorMsg = document.getElementById('form-error');
 
-  // Máscara de telefone brasileiro: (00) 0 0000-0000 ou (00) 0000-0000
   const phoneInput = document.getElementById('phone');
   const phoneError = document.getElementById('phone-error');
+  
   phoneInput.addEventListener('input', function () {
     let v = this.value.replace(/\D/g, '').slice(0, 11);
     if (v.length <= 10) {
@@ -187,23 +197,18 @@
     }
     this.value = v;
   });
+
   phoneInput.addEventListener('blur', function () {
     const digits = this.value.replace(/\D/g, '');
     phoneError.classList.toggle('hidden', digits.length === 0 || digits.length >= 10);
   });
 
-  // Validação visual de email
   const emailInput = document.getElementById('email');
   const emailError = document.getElementById('email-error');
+  
   emailInput.addEventListener('blur', function () {
     const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.value);
     emailError.classList.toggle('hidden', this.value === '' || valid);
-  });
-  emailInput.addEventListener('input', function () {
-    if (!emailError.classList.contains('hidden')) {
-      const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.value);
-      if (valid) emailError.classList.add('hidden');
-    }
   });
 
   form.addEventListener('submit', async function(e) {
@@ -211,6 +216,7 @@
     successMsg.classList.add('hidden');
     errorMsg.classList.add('hidden');
     submitBtn.disabled = true;
+    const originalText = submitBtn.textContent;
     submitBtn.textContent = 'Enviando...';
 
     try {
@@ -222,6 +228,7 @@
       if (data.success) {
         successMsg.classList.remove('hidden');
         form.reset();
+        window.scrollTo({ top: successMsg.offsetTop - 100, behavior: 'smooth' });
       } else {
         errorMsg.classList.remove('hidden');
       }
@@ -229,16 +236,9 @@
       errorMsg.classList.remove('hidden');
     } finally {
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Enviar Mensagem';
+      submitBtn.textContent = originalText;
     }
   });
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
