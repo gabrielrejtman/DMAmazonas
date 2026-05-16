@@ -7,6 +7,19 @@
   <link rel="icon" href="../assets/images/logo.png" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../assets/css/styles.css">
+  <style>
+    .chev-card { cursor: pointer; transition: box-shadow 0.2s, transform 0.2s; }
+    .chev-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+    .chev-list {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.3s;
+      opacity: 0;
+    }
+    .chev-list.open { max-height: 800px; opacity: 1; }
+    .chev-chevron { transition: transform 0.3s cubic-bezier(0.4,0,0.2,1); flex-shrink: 0; }
+    .chev-card.open .chev-chevron { transform: rotate(180deg); }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
@@ -21,14 +34,12 @@
       </div>
       <div class="p-8 lg:p-12 lg:w-2/3 flex flex-col justify-center items-center lg:items-start">
         <h1 class="text-3xl font-bold text-blue-900 mb-6 m-0 w-full">Corte de Chevaliers</h1>
-        
         <p class="text-lg leading-relaxed text-gray-700 mb-6 w-full">
           A Corte de Chevaliers reúne os membros que receberam o Grau de Chevalier, a honraria mais alta para um DeMolay ativo. Essa ordem valoriza os jovens que demonstram mérito, serviço e compromisso com a Ordem DeMolay.
         </p>
         <p class="text-lg leading-relaxed text-gray-700 mb-8 w-full">
           O capítulo Comendadores da Luz nº 72 é patrocinado pelas lojas Fireza e Renascença nº 37 e Encontro das Águas nº 33. O Comendador do Leste atual é Victor Rafael Ordozgoite (Jan-Dez/2026).
         </p>
-        
         <div class="flex flex-col sm:flex-row items-center gap-4 w-full justify-center lg:justify-start">
           <span class="font-bold text-blue-900 uppercase tracking-wider text-sm">Siga-nos:</span>
           <a href="https://www.instagram.com/comendadoresdaluz" target="_blank" class="button-secondary py-2 px-6 flex items-center justify-center gap-2">
@@ -45,64 +56,187 @@
       <h2 class="text-2xl md:text-3xl font-bold text-blue-900 m-0">Chevaliers do Amazonas</h2>
     </div>
     <p class="text-lg text-gray-700 leading-relaxed mb-8 text-center md:text-left">
-      A Corte de Chevaliers agrupa membros experientes de diferentes capítulos, reconhecendo sua dedicação através de investiduras especiais.
+      A Corte de Chevaliers agrupa membros experientes de diferentes capítulos, reconhecendo sua dedicação através de investiduras especiais. Clique em um capítulo para ver os Chevaliers.
     </p>
 
     <div class="content-grid-3 text-center md:text-left">
-      
-      <article class="card flex flex-col justify-between border-t-4 border-t-red-700">
-        <h3 class="text-xl font-bold text-blue-900 mb-4 m-0">Cidade de Manaus nº 26</h3>
-        <div class="flex items-baseline justify-center md:justify-start gap-2">
-          <span class="text-4xl font-bold text-red-700">12</span>
-          <span class="text-gray-500 font-medium">Chevaliers</span>
+
+      <!-- nº 26 -->
+      <article class="card chev-card flex flex-col border-t-4 border-t-red-700" onclick="toggleCard(this)">
+        <div class="flex items-start justify-between gap-2">
+          <div class="flex-1">
+            <h3 class="text-xl font-bold text-blue-900 mb-4 m-0">Cidade de Manaus nº 26</h3>
+            <div class="flex items-baseline justify-center md:justify-start gap-2">
+              <span class="text-4xl font-bold text-red-700">12</span>
+              <span class="text-gray-500 font-medium">Chevaliers</span>
+            </div>
+          </div>
+          <svg class="chev-chevron w-5 h-5 text-red-700 mt-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+        <div class="chev-list mt-4">
+          <ul class="text-left text-sm text-gray-700 space-y-1 border-t border-gray-200 pt-4">
+            <li class="flex justify-between gap-2"><span>Breno Barbosa Soares Alves</span><span class="text-gray-400 whitespace-nowrap">30/10/2018</span></li>
+            <li class="flex justify-between gap-2"><span>Daniel Txa-Iá Aguiar Amancio</span><span class="text-gray-400 whitespace-nowrap">12/03/2018</span></li>
+            <li class="flex justify-between gap-2"><span>Frederico Moz Scian</span><span class="text-gray-400 whitespace-nowrap">25/01/1992</span></li>
+            <li class="flex justify-between gap-2"><span>Hygor Rodrigues Goellner</span><span class="text-gray-400 whitespace-nowrap">14/12/2012</span></li>
+            <li class="flex justify-between gap-2"><span>Igson de Oliveira Andrade Junior</span><span class="text-gray-400 whitespace-nowrap">04/04/2025</span></li>
+            <li class="flex justify-between gap-2"><span>João da Cunha Rabelo Neto</span><span class="text-gray-400 whitespace-nowrap">06/03/2024</span></li>
+            <li class="flex justify-between gap-2"><span>João Paulo Borges Borba</span><span class="text-gray-400 whitespace-nowrap">19/04/2022</span></li>
+            <li class="flex justify-between gap-2"><span>Jonathan da Silva Santiago</span><span class="text-gray-400 whitespace-nowrap">12/03/2018</span></li>
+            <li class="flex justify-between gap-2"><span>José Augusto de Freitas Prazeres Júnior</span><span class="text-gray-400 whitespace-nowrap">20/02/2014</span></li>
+            <li class="flex justify-between gap-2"><span>Luiz Eduardo Souza Araújo</span><span class="text-gray-400 whitespace-nowrap">04/02/2026</span></li>
+            <li class="flex justify-between gap-2"><span>Marcelo Garcia Ramos</span><span class="text-gray-400 whitespace-nowrap">20/08/2025</span></li>
+            <li class="flex justify-between gap-2"><span>Silvio Henrique dos Santos Ramos</span><span class="text-gray-400 whitespace-nowrap">01/10/2019</span></li>
+          </ul>
         </div>
       </article>
 
-      <article class="card flex flex-col justify-between border-t-4 border-t-red-700">
-        <h3 class="text-xl font-bold text-blue-900 mb-4 m-0">Unidos na Esperança nº 29</h3>
-        <div class="flex items-baseline justify-center md:justify-start gap-2">
-          <span class="text-4xl font-bold text-red-700">02</span>
-          <span class="text-gray-500 font-medium">Chevaliers</span>
+      <!-- nº 29 -->
+      <article class="card chev-card flex flex-col border-t-4 border-t-red-700" onclick="toggleCard(this)">
+        <div class="flex items-start justify-between gap-2">
+          <div class="flex-1">
+            <h3 class="text-xl font-bold text-blue-900 mb-4 m-0">Unidos na Esperança nº 29</h3>
+            <div class="flex items-baseline justify-center md:justify-start gap-2">
+              <span class="text-4xl font-bold text-red-700">02</span>
+              <span class="text-gray-500 font-medium">Chevaliers</span>
+            </div>
+          </div>
+          <svg class="chev-chevron w-5 h-5 text-red-700 mt-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+        <div class="chev-list mt-4">
+          <ul class="text-left text-sm text-gray-700 space-y-1 border-t border-gray-200 pt-4">
+            <li class="flex justify-between gap-2"><span>Gabriel Teixeira de Araújo Neto</span><span class="text-gray-400 whitespace-nowrap">13/10/2021</span></li>
+            <li class="flex justify-between gap-2"><span>Luís Felipe Farias Maia</span><span class="text-gray-400 whitespace-nowrap">08/10/2018</span></li>
+          </ul>
         </div>
       </article>
 
-      <article class="card flex flex-col justify-between border-t-4 border-t-red-700">
-        <h3 class="text-xl font-bold text-blue-900 mb-4 m-0">Filhos do Verde Amazônico nº 43</h3>
-        <div class="flex items-baseline justify-center md:justify-start gap-2">
-          <span class="text-4xl font-bold text-red-700">09</span>
-          <span class="text-gray-500 font-medium">Chevaliers</span>
+      <!-- nº 43 -->
+      <article class="card chev-card flex flex-col border-t-4 border-t-red-700" onclick="toggleCard(this)">
+        <div class="flex items-start justify-between gap-2">
+          <div class="flex-1">
+            <h3 class="text-xl font-bold text-blue-900 mb-4 m-0">Filhos do Verde Amazônico nº 43</h3>
+            <div class="flex items-baseline justify-center md:justify-start gap-2">
+              <span class="text-4xl font-bold text-red-700">09</span>
+              <span class="text-gray-500 font-medium">Chevaliers</span>
+            </div>
+          </div>
+          <svg class="chev-chevron w-5 h-5 text-red-700 mt-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+        <div class="chev-list mt-4">
+          <ul class="text-left text-sm text-gray-700 space-y-1 border-t border-gray-200 pt-4">
+            <li class="flex justify-between gap-2"><span>Etzel Chaves Oliveira Santos</span><span class="text-gray-400 whitespace-nowrap">10/07/2007</span></li>
+            <li class="flex justify-between gap-2"><span>Gabriel Silva Zumaeta</span><span class="text-gray-400 whitespace-nowrap">02/05/2023</span></li>
+            <li class="flex justify-between gap-2"><span>Guilherme Destro Calixto</span><span class="text-gray-400 whitespace-nowrap">11/03/2020</span></li>
+            <li class="flex justify-between gap-2"><span>Henrick Horta Feitoza</span><span class="text-gray-400 whitespace-nowrap">06/11/2015</span></li>
+            <li class="flex justify-between gap-2"><span>Janderson do Nascimento Lira</span><span class="text-gray-400 whitespace-nowrap">29/03/2019</span></li>
+            <li class="flex justify-between gap-2"><span>Luiz Felipe de Oliveira Mendes</span><span class="text-gray-400 whitespace-nowrap">15/09/2023</span></li>
+            <li class="flex justify-between gap-2"><span>Marlon Prado da Silva</span><span class="text-gray-400 whitespace-nowrap">30/03/2022</span></li>
+            <li class="flex justify-between gap-2"><span>Sergio Lyra Barboza</span><span class="text-gray-400 whitespace-nowrap">02/05/2017</span></li>
+            <li class="flex justify-between gap-2"><span>Yuri Simon Salim Jorge Assel</span><span class="text-gray-400 whitespace-nowrap">09/03/2026</span></li>
+          </ul>
         </div>
       </article>
 
-      <article class="card flex flex-col justify-between border-t-4 border-t-red-700">
-        <h3 class="text-xl font-bold text-blue-900 mb-4 m-0">Ajuricaba/Amazonas nº 263</h3>
-        <div class="flex items-baseline justify-center md:justify-start gap-2">
-          <span class="text-4xl font-bold text-red-700">19</span>
-          <span class="text-gray-500 font-medium">Chevaliers</span>
+      <!-- nº 263 -->
+      <article class="card chev-card flex flex-col border-t-4 border-t-red-700" onclick="toggleCard(this)">
+        <div class="flex items-start justify-between gap-2">
+          <div class="flex-1">
+            <h3 class="text-xl font-bold text-blue-900 mb-4 m-0">Ajuricaba/Amazonas nº 263</h3>
+            <div class="flex items-baseline justify-center md:justify-start gap-2">
+              <span class="text-4xl font-bold text-red-700">18</span>
+              <span class="text-gray-500 font-medium">Chevaliers</span>
+            </div>
+          </div>
+          <svg class="chev-chevron w-5 h-5 text-red-700 mt-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+        <div class="chev-list mt-4">
+          <ul class="text-left text-sm text-gray-700 space-y-1 border-t border-gray-200 pt-4">
+            <li class="flex justify-between gap-2"><span>Alberto Lúcio Santos</span><span class="text-gray-400 whitespace-nowrap">02/05/2017</span></li>
+            <li class="flex justify-between gap-2"><span>Andre Luiz David Prazeres</span><span class="text-gray-400 whitespace-nowrap">13/10/2021</span></li>
+            <li class="flex justify-between gap-2"><span>Dean Batista dos Santos</span><span class="text-gray-400 whitespace-nowrap">12/03/2018</span></li>
+            <li class="flex justify-between gap-2"><span>Diego Liebert Dantas Vieira</span><span class="text-gray-400 whitespace-nowrap">17/12/2001</span></li>
+            <li class="flex justify-between gap-2"><span>Douglas Rui Pessoa Reis Aguiar</span><span class="text-gray-400 whitespace-nowrap">20/02/2014</span></li>
+            <li class="flex justify-between gap-2"><span>Gabriel Rodrigues Silva</span><span class="text-gray-400 whitespace-nowrap">13/10/2022</span></li>
+            <li class="flex justify-between gap-2"><span>Igor Alexandre Gioia de Souto</span><span class="text-gray-400 whitespace-nowrap">09/03/2026</span></li>
+            <li class="flex justify-between gap-2"><span>José Renato de Lima Júnior</span><span class="text-gray-400 whitespace-nowrap">11/03/2016</span></li>
+            <li class="flex justify-between gap-2"><span>Leocadio Lopes</span><span class="text-gray-400 whitespace-nowrap">17/12/2001</span></li>
+            <li class="flex justify-between gap-2"><span>Luiz Carlos Carvalho Júnior</span><span class="text-gray-400 whitespace-nowrap">19/12/2001</span></li>
+            <li class="flex justify-between gap-2"><span>Paulo de Tarso Mendes Coimbra</span><span class="text-gray-400 whitespace-nowrap">14/12/2012</span></li>
+            <li class="flex justify-between gap-2"><span>Raphael Holanda Santos</span><span class="text-gray-400 whitespace-nowrap">14/12/2012</span></li>
+            <li class="flex justify-between gap-2"><span>Rennier Recco dos Santos Colares Ribeiro</span><span class="text-gray-400 whitespace-nowrap">10/08/2009</span></li>
+            <li class="flex justify-between gap-2"><span>Rickson dos Santos Colares Ribeiro</span><span class="text-gray-400 whitespace-nowrap">10/07/2007</span></li>
+            <li class="flex justify-between gap-2"><span>Samuel Caloba Aguiar</span><span class="text-gray-400 whitespace-nowrap">24/03/2014</span></li>
+            <li class="flex justify-between gap-2"><span>Vanylton Bezerra dos Santos</span><span class="text-gray-400 whitespace-nowrap">10/07/2007</span></li>
+            <li class="flex justify-between gap-2"><span>Victor Rafael Ordozgoite</span><span class="text-gray-400 whitespace-nowrap">28/03/2019</span></li>
+            <li class="flex justify-between gap-2"><span>Wellinton Maurício Nogueira da Rocha</span><span class="text-gray-400 whitespace-nowrap">17/10/2019</span></li>
+          </ul>
         </div>
       </article>
 
-      <article class="card flex flex-col justify-between border-t-4 border-t-red-700">
-        <h3 class="text-xl font-bold text-blue-900 mb-4 m-0">Cavaleiros da Verdadeira Luz nº 1200</h3>
-        <div class="flex items-baseline justify-center md:justify-start gap-2">
-          <span class="text-4xl font-bold text-red-700">02</span>
-          <span class="text-gray-500 font-medium">Chevaliers</span>
+      <!-- nº 926 -->
+      <article class="card chev-card flex flex-col border-t-4 border-t-red-700" onclick="toggleCard(this)">
+        <div class="flex items-start justify-between gap-2">
+          <div class="flex-1">
+            <h3 class="text-xl font-bold text-blue-900 mb-4 m-0">Filhos das Águas nº 926</h3>
+            <div class="flex items-baseline justify-center md:justify-start gap-2">
+              <span class="text-4xl font-bold text-red-700">07</span>
+              <span class="text-gray-500 font-medium">Chevaliers</span>
+            </div>
+          </div>
+          <svg class="chev-chevron w-5 h-5 text-red-700 mt-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+        <div class="chev-list mt-4">
+          <ul class="text-left text-sm text-gray-700 space-y-1 border-t border-gray-200 pt-4">
+            <li class="flex justify-between gap-2"><span>Adamor José Santos da Silva Júnior</span><span class="text-gray-400 whitespace-nowrap">05/08/2024</span></li>
+            <li class="flex justify-between gap-2"><span>Carlos Gabriel Barbosa Brazão</span><span class="text-gray-400 whitespace-nowrap">26/02/2026</span></li>
+            <li class="flex justify-between gap-2"><span>Carlos José Baptista Machado Filho</span><span class="text-gray-400 whitespace-nowrap">29/11/2021</span></li>
+            <li class="flex justify-between gap-2"><span>João Paulo Sena de Oliveira Cavalcante</span><span class="text-gray-400 whitespace-nowrap">02/03/2026</span></li>
+            <li class="flex justify-between gap-2"><span>João Pedro Fróes de Mello Rosas</span><span class="text-gray-400 whitespace-nowrap">08/02/2023</span></li>
+            <li class="flex justify-between gap-2"><span>João Victor Figueira Lins</span><span class="text-gray-400 whitespace-nowrap">16/02/2022</span></li>
+            <li class="flex justify-between gap-2"><span>Rodrigo Soares dos Santos</span><span class="text-gray-400 whitespace-nowrap">29/03/2019</span></li>
+          </ul>
         </div>
       </article>
 
-      <article class="card flex flex-col justify-between border-t-4 border-t-red-700">
-        <h3 class="text-xl font-bold text-blue-900 mb-4 m-0">Filhos das Águas nº 926</h3>
-        <div class="flex items-baseline justify-center md:justify-start gap-2">
-          <span class="text-4xl font-bold text-red-700">07</span>
-          <span class="text-gray-500 font-medium">Chevaliers</span>
+      <!-- nº 1186 -->
+      <article class="card chev-card flex flex-col border-t-4 border-t-red-700" onclick="toggleCard(this)">
+        <div class="flex items-start justify-between gap-2">
+          <div class="flex-1">
+            <h3 class="text-xl font-bold text-blue-900 mb-4 m-0">Forte de Ega nº 1186</h3>
+            <div class="flex items-baseline justify-center md:justify-start gap-2">
+              <span class="text-4xl font-bold text-red-700">03</span>
+              <span class="text-gray-500 font-medium">Chevaliers</span>
+            </div>
+          </div>
+          <svg class="chev-chevron w-5 h-5 text-red-700 mt-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+        <div class="chev-list mt-4">
+          <ul class="text-left text-sm text-gray-700 space-y-1 border-t border-gray-200 pt-4">
+            <li class="flex justify-between gap-2"><span>Andre Giovanni de Almeida Coelho</span><span class="text-gray-400 whitespace-nowrap">12/11/2005</span></li>
+            <li class="flex justify-between gap-2"><span>Isaac de Oliveira Rodrigues</span><span class="text-gray-400 whitespace-nowrap">19/02/2026</span></li>
+            <li class="flex justify-between gap-2"><span>Roberto Vinicius Fonseca Silveira da Silva</span><span class="text-gray-400 whitespace-nowrap">21/03/2024</span></li>
+          </ul>
         </div>
       </article>
 
-      <article class="card flex flex-col justify-between border-t-4 border-t-red-700">
-        <h3 class="text-xl font-bold text-blue-900 mb-4 m-0">Forte de Ega nº 1186</h3>
-        <div class="flex items-baseline justify-center md:justify-start gap-2">
-          <span class="text-4xl font-bold text-red-700">03</span>
-          <span class="text-gray-500 font-medium">Chevaliers</span>
+      <!-- nº 1200 -->
+      <article class="card chev-card flex flex-col border-t-4 border-t-red-700" onclick="toggleCard(this)">
+        <div class="flex items-start justify-between gap-2">
+          <div class="flex-1">
+            <h3 class="text-xl font-bold text-blue-900 mb-4 m-0">Cavaleiros da Verdadeira Luz nº 1200</h3>
+            <div class="flex items-baseline justify-center md:justify-start gap-2">
+              <span class="text-4xl font-bold text-red-700">02</span>
+              <span class="text-gray-500 font-medium">Chevaliers</span>
+            </div>
+          </div>
+          <svg class="chev-chevron w-5 h-5 text-red-700 mt-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+        <div class="chev-list mt-4">
+          <ul class="text-left text-sm text-gray-700 space-y-1 border-t border-gray-200 pt-4">
+            <li class="flex justify-between gap-2"><span>Salomão Ronielli Campos Moreira</span><span class="text-gray-400 whitespace-nowrap">23/09/2025</span></li>
+            <li class="flex justify-between gap-2"><span>Raphael Henrique Jorge de Araujo</span><span class="text-gray-400 whitespace-nowrap">02/05/2026</span></li>
+          </ul>
         </div>
       </article>
 
@@ -113,5 +247,13 @@
 
 <div data-component="footer"></div>
 <script src="../assets/js/components.js"></script>
+<script>
+  function toggleCard(card) {
+    const list = card.querySelector('.chev-list');
+    const isOpen = list.classList.contains('open');
+    list.classList.toggle('open', !isOpen);
+    card.classList.toggle('open', !isOpen);
+  }
+</script>
 </body>
 </html>
